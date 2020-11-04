@@ -1,5 +1,6 @@
 package com.shohamc1.foodavenue;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,13 +23,9 @@ public class Landing extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
 
-        view.findViewById(R.id.getstarted).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(Landing.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
+    public void change_layout(android.view.View view) {
+        //setContentView(R.layout.dish_list);
     }
 }

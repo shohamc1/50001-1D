@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- PLEASE REFACTOR TO ConstraintLayout and use % values -->
+<!-- PLEASE REFACTOR TO ConstraintLayout AND USE % VALUES -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +14,7 @@
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:maxWidth="@android:dimen/app_icon_size"
-        android:src="@drawable/happy_sushi" />
+        android:src="@drawable/sushi" />
 
     <TextView
         android:id="@+id/main_text"
@@ -36,7 +36,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:text="Get Started"
-        android:background="@drawable/rounded_corners"/>
+        android:background="@drawable/rounded_corners"
+        android:onClick="change_layout"/>
 
 
 </RelativeLayout>
