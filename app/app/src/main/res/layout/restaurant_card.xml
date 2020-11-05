@@ -9,7 +9,7 @@ find a way to fix width, I think should look into parent layouts instead of this
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingVertical="30dp"
-    android:paddingHorizontal="90dp"
+    android:paddingHorizontal="60dp"
     android:clickable="true"
     android:elevation="12dp"
     >
@@ -42,7 +42,7 @@ find a way to fix width, I think should look into parent layouts instead of this
         android:textSize="20dp"
         android:textColor="#000"
         android:textStyle="bold"
-        android:text="Food Name" />
+        android:text="Restaurant Name" />
 
 
 </LinearLayout>

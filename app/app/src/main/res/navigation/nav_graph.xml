@@ -10,9 +10,8 @@
         android:name="com.shohamc1.foodavenue.Landing"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/landing">
-
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_Landing_to_SecondFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
