@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "240104349741",
+    "firebase_url": "https://food-avenue-e1327.firebaseio.com",
+    "project_id": "food-avenue-e1327",
+    "storage_bucket": "food-avenue-e1327.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240104349741:android:a7ddb92b1ebe3c9e5498a4",
+        "android_client_info": {
+          "package_name": "com.shohamc1.foodavenue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240104349741-iig9b4ldimqpaendd5khpmgcp6si3u52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUFprwIpNHh_-87sUzPTWGnbVp2ZCPS2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240104349741-iig9b4ldimqpaendd5khpmgcp6si3u52.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
