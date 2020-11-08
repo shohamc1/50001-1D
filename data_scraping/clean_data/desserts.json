@@ -1,0 +1,56 @@
+[
+  {
+    "name": "One Man Coffee",
+    "rating": 4.3,
+    "post_code": 574349,
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "Venchi",
+    "rating": 4.3,
+    "post_code": 238873,
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "Keong Saik Bakery",
+    "rating": 4.2,
+    "post_code": "089140",
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "machi machi",
+    "rating": 3.9,
+    "post_code": 199724,
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "LUNA",
+    "rating": 4,
+    "post_code": "069879",
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "Genius Central",
+    "rating": 4.3,
+    "post_code": "049949",
+    "cuisine": "Indian,Desserts"
+  },
+  {
+    "name": "100labs",
+    "rating": 5,
+    "post_code": 198489,
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "Celine's Gelato Cart",
+    "rating": 4.9,
+    "post_code": 307645,
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "French Fold",
+    "rating": 4.9,
+    "post_code": "068640",
+    "cuisine": "Fusion,Desserts"
+  }
+]

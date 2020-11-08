@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Beng Hiang Restaurant",
+    "rating": 3.9,
+    "post_code": 600135,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Lighthouse Bistro & Bar",
+    "rating": 4.5,
+    "post_code": 208738,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Scaled by Ah Hua Kelong",
+    "rating": 4.8,
+    "post_code": 209179,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Ginger",
+    "rating": 3.4,
+    "post_code": 199591,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "The Bettership",
+    "rating": 4,
+    "post_code": 229233,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "T.K Kitchen",
+    "rating": 3.9,
+    "post_code": 600037,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Lobsters & Ice Cream v2.0",
+    "rating": 4.3,
+    "post_code": "081007",
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Luke's Lobster",
+    "rating": 2.5,
+    "post_code": 238868,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "House Of Chirashi",
+    "rating": 4.8,
+    "post_code": 487048,
+    "cuisine": "Seafood"
+  },
+  {
+    "name": "Euro Thai Kitchen and Mala House",
+    "rating": 5,
+    "post_code": "082001",
+    "cuisine": "Seafood"
+  }
+]

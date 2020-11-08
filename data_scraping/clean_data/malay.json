@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Hjh Maimunah Restaurant",
+    "rating": 4.4,
+    "post_code": 427357,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Air Pasang Eating House",
+    "rating": 4.1,
+    "post_code": 650375,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Istanbul",
+    "rating": 4.1,
+    "post_code": 520476,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Pu3 Restaurant",
+    "rating": 4.3,
+    "post_code": 238164,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Aspirasi Chicken Rice",
+    "rating": 4.1,
+    "post_code": "099114",
+    "cuisine": "Malay"
+  },
+  {
+    "name": "363 Katong Laksa Holland Village Nasi Lemak",
+    "rating": 2.7,
+    "post_code": 277700,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "CRAVE Nasi Lemak",
+    "rating": 3.7,
+    "post_code": 467360,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Impian Wahyu",
+    "rating": 4.6,
+    "post_code": 208805,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Wedang",
+    "rating": 4.6,
+    "post_code": 199583,
+    "cuisine": "Malay"
+  },
+  {
+    "name": "Soulfood Catering",
+    "rating": 4.8,
+    "post_code": 198614,
+    "cuisine": "Malay"
+  }
+]
