@@ -12,6 +12,7 @@ find a way to fix width, I think should look into parent layouts instead of this
     android:paddingHorizontal="60dp"
     android:clickable="true"
     android:elevation="12dp"
+    android:id="@+id/res_card"
     >
 
     <androidx.cardview.widget.CardView
