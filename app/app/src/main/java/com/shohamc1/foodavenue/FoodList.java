@@ -22,6 +22,7 @@ public class FoodList extends MainActivity {
     LinearLayout dishlist = findViewById(R.id.dishlist);
     LinearLayout food_card = findViewById(R.id.food_card);
     TextView text = findViewById(R.id.foodtext);
+    ImageView image = findViewById(R.id.foodimage);
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class FoodList extends MainActivity {
         food_card.addView(item);
         dishlist.addView(food_card);
         //text.setText(food in database);
+        //image.setImage(image of food);
 
     }
 
