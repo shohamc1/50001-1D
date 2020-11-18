@@ -28,9 +28,5 @@ public class Landing extends MainActivity {
             }
         });
     }
-/*
-
-
-*/
 
 }
