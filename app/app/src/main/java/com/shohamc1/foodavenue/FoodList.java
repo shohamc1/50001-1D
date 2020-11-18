@@ -25,7 +25,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-public class FoodList extends MainActivity {
+public class FoodList extends MainActivity{
     LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     LinearLayout dishlist = findViewById(R.id.dishlist);
     LinearLayout food_card = findViewById(R.id.food_card);
@@ -39,14 +39,10 @@ public class FoodList extends MainActivity {
         //for no.of food items
         //i.create_card();
 
-
     }
 
     protected void create_card(String name){
-        food_card.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        View item = getLayoutInflater().inflate(R.layout.food_card, null, false);
-        food_card.addView(item);
-        dishlist.addView(food_card);
+
         //text.setText(food in database);
         //image.setImage(image of food);
 
