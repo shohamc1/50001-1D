@@ -39,6 +39,7 @@
         android:textSize="18dp"/>
 
     <ScrollView
+        android:id= "@+id/charaRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pop_lf"
@@ -89,7 +90,7 @@
                 android:layout_below="@+id/layout3"
                 android:layout_marginBottom="50dp"/> <!-- last one special tag -->
         </LinearLayout>
-    </ScrollView>
+    </>
 
 
 </RelativeLayout>

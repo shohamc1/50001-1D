@@ -45,7 +45,6 @@ public class FoodList extends MainActivity{
 
         //text.setText(food in database);
         //image.setImage(image of food);
-
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("restaurants")
                 .whereEqualTo("cuisine", "Desserts")
