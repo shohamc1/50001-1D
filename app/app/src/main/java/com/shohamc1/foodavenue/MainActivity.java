@@ -35,8 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
         Button button = findViewById(R.id.getstarted);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,19 +47,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("data").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document: task.getResult()) {
-                        System.out.println(document.getData());
-                    }
-                } else {
-                    System.out.println("error");
-                }
-            }
-        });
+//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+//        db.collection("data").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                if (task.isSuccessful()) {
+//                    for (QueryDocumentSnapshot document: task.getResult()) {
+//                        System.out.println(document.getData());
+//                    }
+//                } else {
+//                    System.out.println("error");
+//                }
+//            }
+//        });
     }
 
     @Override

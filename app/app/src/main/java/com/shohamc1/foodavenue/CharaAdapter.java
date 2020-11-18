@@ -10,8 +10,8 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
     @NonNull
     @Override
     public CharaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = mInflater.inflate(R.layout.food_card, viewGroup, false );
-        return new CharaViewHolder(itemView);
+        //View itemView = mInflater.inflate(R.layout.food_card, viewGroup, false );
+        return null;
     }
 
     @Override
