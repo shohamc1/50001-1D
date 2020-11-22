@@ -30,12 +30,14 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class FoodList extends MainActivity{
     RecyclerView recyclerView;
     private LinkedList<String> dishnames = new LinkedList<>();
     private LinkedList<Integer> images = new LinkedList<>();
+    private LinkedList<HashMap<String,String>> args=new LinkedList<>();
 
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -69,9 +71,13 @@ public class FoodList extends MainActivity{
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for(QueryDocumentSnapshot doc: task.getResult()) {
-                                System.out.println(doc.getData());
+                                //System.out.println(doc.getData());
                                 // add to card list
                                 dishnames.add((String) doc.getData().get("dish"));
+                                HashMap<String, String> temp=new HashMap<>();
+                                temp.put("restaurant",(String)doc.getData().get("restaurant"));
+                                //add other args belongs to the dish to hashmap
+                                args.add(temp);
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");
