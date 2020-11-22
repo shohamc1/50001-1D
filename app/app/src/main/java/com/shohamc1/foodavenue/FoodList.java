@@ -29,9 +29,13 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class FoodList extends MainActivity{
     RecyclerView recyclerView;
-
+    private LinkedList<String> dishnames = new LinkedList<>();
+    private LinkedList<Integer> images = new LinkedList<>();
 
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -40,11 +44,11 @@ public class FoodList extends MainActivity{
         setContentView(R.layout.dish_list);
 
 
-        //recyclerView = findViewById(R.id.charaRecyclerView);
-        //dataSource = ??? ;
-        //charaAdapter = new CharaAdapter( this , dataSource );
-        //recyclerView.setAdapter(charaAdapter);
-        //recyclerView.setLayoutManager( new LinearLayoutManager( this ));
+        recyclerView = findViewById(R.id.charaRecyclerView);
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        CharaAdapter adpter = new CharaAdapter(dishnames);
+        recyclerView.setAdapter(adpter);
+        recyclerView.setLayoutManager( new LinearLayoutManager( this ));
         //for no.of food items
         //i.create_card();
 
@@ -56,9 +60,9 @@ public class FoodList extends MainActivity{
         //text.setText(food in database);
         //image.setImage(image of food);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("restaurants")
-                .whereEqualTo("cuisine", "Desserts")
-                .orderBy("rating", Query.Direction.DESCENDING)
+        db.collection("dishes")
+                //.whereEqualTo("cuisine", "Desserts")
+                //.orderBy("rating", Query.Direction.DESCENDING)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -67,6 +71,7 @@ public class FoodList extends MainActivity{
                             for(QueryDocumentSnapshot doc: task.getResult()) {
                                 System.out.println(doc.getData());
                                 // add to card list
+                                dishnames.add((String) doc.getData().get("dish"));
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");

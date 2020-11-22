@@ -10,14 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.google.android.gms.common.util.Strings;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
-    private HashMap[] mDataset;
+    private LinkedList<String> dishnames;
+    private LinkedList<Integer> images;
 
-    public CharaAdapter(HashMap[] myDataSet) {
-        mDataset = myDataSet;
+    public CharaAdapter(LinkedList<String> dishnames) {
+        this.dishnames = dishnames;
+        //this.images = images;
     }
     @NonNull
     @Override
@@ -28,7 +36,7 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
 
     @Override
     public void onBindViewHolder(@NonNull CharaViewHolder holder, int position) {
-        holder.text.setText((String)mDataset[position].get("dish"));
+        holder.text.setText((String) dishnames.get(position));
         //holder.image.setImageDrawable();
 
     }
@@ -36,7 +44,7 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
     @Override
     public int getItemCount() {
 
-        return mDataset.length;
+        return dishnames.size();
     }
 
     //code not shown
