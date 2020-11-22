@@ -1,43 +1,31 @@
 package com.shohamc1.foodavenue;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.Window;
-import android.widget.Adapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.appcompat.widget.Toolbar;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.api.Distribution;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 public class FoodList extends MainActivity{
     RecyclerView recyclerView;
-    private LinkedList<String> dishnames = new LinkedList<>();
+
     private LinkedList<Integer> images = new LinkedList<>();
-    private LinkedList<HashMap<String,String>> args=new LinkedList<>();
+    private LinkedList<String> cuisines = new LinkedList<>();
+
 
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -47,18 +35,15 @@ public class FoodList extends MainActivity{
 
 
         recyclerView = findViewById(R.id.charaRecyclerView);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        CharaAdapter adpter = new CharaAdapter(dishnames);
-        recyclerView.setAdapter(adpter);
+        CharaAdapter adapter = new CharaAdapter(get_dishes());
+        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager( new LinearLayoutManager( this ));
-        //for no.of food items
-        //i.create_card();
 
     }
 
 
-    protected void create_card(String name){
-
+    public static LinkedList<String> get_dishes(){
+        final LinkedList<String> dishnames = new LinkedList<>();
         //text.setText(food in database);
         //image.setImage(image of food);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -71,19 +56,26 @@ public class FoodList extends MainActivity{
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for(QueryDocumentSnapshot doc: task.getResult()) {
-                                //System.out.println(doc.getData());
+                                System.out.println(doc.getData());
                                 // add to card list
                                 dishnames.add((String) doc.getData().get("dish"));
-                                HashMap<String, String> temp=new HashMap<>();
-                                temp.put("restaurant",(String)doc.getData().get("restaurant"));
-                                //add other args belongs to the dish to hashmap
-                                args.add(temp);
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");
                         }
                     }
                 });
+        return dishnames;
+    }
+    public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {
+        HashMap map = new HashMap() {
+        };
+        Iterator<String> i1 = keys.iterator();
+        Iterator<String> i2 = values.iterator();
+        while (i1.hasNext() && i2.hasNext()) {
+            map.put(i1.next(), i2.next());
+        }
+        return map;
     }
 
 

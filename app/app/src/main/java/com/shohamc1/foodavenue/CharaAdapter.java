@@ -20,11 +20,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
-    private LinkedList<String> dishnames;
-    private LinkedList<Integer> images;
-
+    private LinkedList<String> dishnames = FoodList.get_dishes();
     public CharaAdapter(LinkedList<String> dishnames) {
-        this.dishnames = dishnames;
+         this.dishnames= dishnames;
         //this.images = images;
     }
     @NonNull
@@ -36,14 +34,13 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
 
     @Override
     public void onBindViewHolder(@NonNull CharaViewHolder holder, int position) {
-        holder.text.setText((String) dishnames.get(position));
-        //holder.image.setImageDrawable();
+        holder.text.setText(dishnames.get(position));
+        //holder.image.setImageResource(images.get(position));
 
     }
 
     @Override
     public int getItemCount() {
-
         return dishnames.size();
     }
 

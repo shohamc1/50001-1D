@@ -35,7 +35,6 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
 
     @Override
     public int getItemCount() {
-
         return mDataset.length;
     }
 

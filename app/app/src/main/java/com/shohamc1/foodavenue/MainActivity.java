@@ -47,19 +47,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//        FirebaseFirestore db = FirebaseFirestore.getInstance();
-//        db.collection("data").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                if (task.isSuccessful()) {
-//                    for (QueryDocumentSnapshot document: task.getResult()) {
-//                        System.out.println(document.getData());
-//                    }
-//                } else {
-//                    System.out.println("error");
-//                }
-//            }
-//        });
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("restaurants").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document: task.getResult()) {
+                        System.out.println(document.getData().get("name"));
+                    }
+                } else {
+                    System.out.println("error");
+                }
+            }
+        });
     }
 
     @Override
