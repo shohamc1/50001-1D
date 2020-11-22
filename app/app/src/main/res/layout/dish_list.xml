@@ -43,53 +43,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pop_lf"
-        android:layout_marginTop="10dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:paddingTop="0dp"
-            android:id="@+id/dishlist">
-            <include
-                android:layout_marginTop="10dp"
-                android:id="@+id/layout1"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pop_lf"
-                android:gravity="center"
-                />
+        android:layout_marginTop="10dp"
+        >
 
-            <include
-                android:id="@+id/layout2"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout1" />
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center"-->
+<!--            android:paddingTop="0dp"-->
+<!--            android:id="@+id/dishlist">-->
+<!--            <include-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:id="@+id/layout1"-->
+<!--                layout="@layout/food_card"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/pop_lf"-->
+<!--                android:gravity="center"-->
+<!--                />-->
 
-            <include
-                android:id="@+id/layout3"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout2" />
+<!--            <include-->
+<!--                android:id="@+id/layout2"-->
+<!--                layout="@layout/food_card"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/layout1" />-->
 
-            <include
-                android:id="@+id/layout4"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout3"
-                android:layout_marginBottom="50dp"/>
-        </LinearLayout>
+<!--            <include-->
+<!--                android:id="@+id/layout3"-->
+<!--                layout="@layout/food_card"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/layout2" />-->
+
+<!--            <include-->
+<!--                android:id="@+id/layout4"-->
+<!--                layout="@layout/food_card"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/layout3"-->
+<!--                android:layout_marginBottom="50dp"/>-->
+<!--        </LinearLayout>-->
     </androidx.recyclerview.widget.RecyclerView>
 
 
