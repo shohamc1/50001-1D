@@ -1,5 +1,6 @@
 package com.shohamc1.foodavenue;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -18,11 +19,10 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 public class FoodList extends MainActivity{
     RecyclerView recyclerView;
-    LinkedList<String> dishNames = new LinkedList<>();
+    LinkedList<FoodData> dishDatas = new LinkedList<>();
 
     private LinkedList<Integer> images = new LinkedList<>();
     private LinkedList<String> cuisines = new LinkedList<>();
@@ -34,7 +34,14 @@ public class FoodList extends MainActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dish_list);
         recyclerView = findViewById(R.id.charaRecyclerView);
-        CharaAdapter adapter = new CharaAdapter(get_dishes());
+        get_dishes();
+        //dishDatas.add(new FoodData("qwe","asd",R.drawable.default_food));
+        //dishDatas.add(new FoodData("rty","asd",R.drawable.default_food));
+        //dishDatas.add(new FoodData("uio","asd",R.drawable.default_food));
+        //dishDatas.add(new FoodData("asd","asd",R.drawable.default_food));
+        //dishDatas.add(new FoodData("fgh","asd",R.drawable.default_food));
+        //dishDatas.add(new FoodData("jkl","asd",R.drawable.default_food));
+        CharaAdapter adapter = new CharaAdapter(dishDatas);
         recyclerView.setLayoutManager( new LinearLayoutManager( this ));
         recyclerView.setAdapter(adapter);
 
@@ -44,7 +51,7 @@ public class FoodList extends MainActivity{
 
 
 
-    public LinkedList<String> get_dishes(){
+    public void get_dishes(){
         //LinkedList<String> dishnames = new LinkedList<>();
         //text.setText(food in database);
         //image.setImage(image of food);
@@ -60,18 +67,29 @@ public class FoodList extends MainActivity{
                             for(QueryDocumentSnapshot doc: task.getResult()) {
                                 //System.out.println(doc.getData());
                                 // add to card list
-                                dishNames.add((String) doc.getData().get("dish"));
-                                System.out.println(dishNames);
+                                String dishName=(String) doc.getData().get("dish");
+                                String cuisine=(String) doc.getData().get("cuisine");
+
+                                int resId=R.drawable.default_food;
+                                try {
+                                    Context ctx=getBaseContext();
+                                    resId = getResources().getIdentifier(dishName, "drawable", ctx.getPackageName());
+                                } catch (Exception e) {
+                                    resId=R.drawable.default_food;
+                                }
+                                finally {
+                                    dishDatas.add(new FoodData(dishName,cuisine,resId));
+                                }
+                                //System.out.println(dishNames);
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");
                         }
 
                         System.out.println("Dish names: ");
-                        System.out.println(dishNames.toString());
+                        System.out.println(dishDatas.toString());
                     }
                 });
-        return dishNames;
     }
 
     public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {

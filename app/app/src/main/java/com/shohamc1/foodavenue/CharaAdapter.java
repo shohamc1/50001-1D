@@ -10,22 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.google.android.gms.common.util.Strings;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
-
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 
 
 
 public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
-    LinkedList<String> dishnames;
+    LinkedList<FoodData> mFoodData;
 
-    public CharaAdapter(LinkedList<String> dishnames) {
-         this.dishnames = dishnames;
+    public CharaAdapter(LinkedList<FoodData> dishnames) {
+         this.mFoodData = dishnames;
         //this.images = images;
     }
 
@@ -38,20 +31,22 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
 
     @Override
     public void onBindViewHolder(@NonNull CharaViewHolder holder, int position) {
-        holder.text.setText(dishnames.get(position));
+        FoodData foodData=mFoodData.get(position);
+        holder.text.setText(foodData.dishName);
+        holder.image.setImageResource(foodData.imageId);
         //holder.image.setImageResource(images.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return new FoodList().get_dishes().size();
+        return mFoodData.size();
     }
 
     //code not shown
     static class CharaViewHolder extends RecyclerView.ViewHolder{
-        ImageView image;
-        TextView text;
-        public CharaViewHolder(@NonNull View itemView) {
+        protected ImageView image;
+        protected TextView text;
+        public CharaViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.foodimage);
             text = itemView.findViewById(R.id.foodtext);
