@@ -22,6 +22,7 @@ import java.util.Map;
 
 public class FoodList extends MainActivity{
     RecyclerView recyclerView;
+    static LinkedList<String> dishNames = new LinkedList<>();
 
     private LinkedList<Integer> images = new LinkedList<>();
     private LinkedList<String> cuisines = new LinkedList<>();
@@ -43,7 +44,7 @@ public class FoodList extends MainActivity{
 
 
     public static LinkedList<String> get_dishes(){
-        final LinkedList<String> dishnames = new LinkedList<>();
+        //LinkedList<String> dishnames = new LinkedList<>();
         //text.setText(food in database);
         //image.setImage(image of food);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -58,14 +59,14 @@ public class FoodList extends MainActivity{
                             for(QueryDocumentSnapshot doc: task.getResult()) {
                                 System.out.println(doc.getData());
                                 // add to card list
-                                dishnames.add((String) doc.getData().get("dish"));
+                                dishNames.add((String) doc.getData().get("dish"));
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");
                         }
                     }
                 });
-        return dishnames;
+        return dishNames;
     }
 
     public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {
@@ -78,10 +79,6 @@ public class FoodList extends MainActivity{
         }
         return map;
     }
-
-
-
-
 }
 
 
