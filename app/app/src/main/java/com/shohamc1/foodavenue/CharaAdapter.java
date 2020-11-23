@@ -23,6 +23,7 @@ import java.util.LinkedList;
 
 public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
     LinkedList<String> dishnames;
+
     public CharaAdapter(LinkedList<String> dishnames) {
          this.dishnames = dishnames;
         //this.images = images;

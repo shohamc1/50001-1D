@@ -43,6 +43,7 @@ public class FoodList extends MainActivity{
 
 
 
+
     public LinkedList<String> get_dishes(){
         //LinkedList<String> dishnames = new LinkedList<>();
         //text.setText(food in database);
@@ -60,6 +61,7 @@ public class FoodList extends MainActivity{
                                 //System.out.println(doc.getData());
                                 // add to card list
                                 dishNames.add((String) doc.getData().get("dish"));
+                                System.out.println(dishNames);
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");
@@ -69,7 +71,6 @@ public class FoodList extends MainActivity{
                         System.out.println(dishNames.toString());
                     }
                 });
-
         return dishNames;
     }
 
