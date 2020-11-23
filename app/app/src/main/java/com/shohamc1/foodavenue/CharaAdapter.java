@@ -19,12 +19,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+
+
 public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder>{
-    private LinkedList<String> dishnames = FoodList.get_dishes();
+    LinkedList<String> dishnames;
     public CharaAdapter(LinkedList<String> dishnames) {
-         this.dishnames= dishnames;
+         this.dishnames = dishnames;
         //this.images = images;
     }
+
     @NonNull
     @Override
     public CharaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -36,12 +39,11 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
     public void onBindViewHolder(@NonNull CharaViewHolder holder, int position) {
         holder.text.setText(dishnames.get(position));
         //holder.image.setImageResource(images.get(position));
-
     }
 
     @Override
     public int getItemCount() {
-        return dishnames.size();
+        return FoodList.get_dishes().size();
     }
 
     //code not shown
@@ -53,7 +55,6 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
             image = itemView.findViewById(R.id.foodimage);
             text = itemView.findViewById(R.id.foodtext);
         }
-
 
     }
 }

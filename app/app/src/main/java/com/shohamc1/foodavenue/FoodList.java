@@ -32,14 +32,14 @@ public class FoodList extends MainActivity{
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dish_list);
-
-
         recyclerView = findViewById(R.id.charaRecyclerView);
         CharaAdapter adapter = new CharaAdapter(get_dishes());
-        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager( new LinearLayoutManager( this ));
+        recyclerView.setAdapter(adapter);
+
 
     }
+
 
 
     public static LinkedList<String> get_dishes(){
@@ -67,6 +67,7 @@ public class FoodList extends MainActivity{
                 });
         return dishnames;
     }
+
     public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {
         HashMap map = new HashMap() {
         };
