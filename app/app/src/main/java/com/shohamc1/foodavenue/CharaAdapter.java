@@ -43,7 +43,7 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
 
     @Override
     public int getItemCount() {
-        return FoodList.get_dishes().size();
+        return new FoodList().get_dishes().size();
     }
 
     //code not shown

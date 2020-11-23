@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot document: task.getResult()) {
-                        System.out.println(document.getData().get("name"));
+                        //System.out.println(document.getData().get("name"));
                     }
                 } else {
                     System.out.println("error");
