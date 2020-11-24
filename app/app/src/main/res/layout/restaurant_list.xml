@@ -15,10 +15,11 @@
         android:id="@+id/navbar">
 
         <ImageView
+            android:id="@+id/food_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back_arrow"
-            android:layout_alignParentLeft="true"/> <!-- put on click here -->
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back_arrow" /> <!-- put on click here -->
 
         <ImageView
             android:layout_width="wrap_content"
@@ -45,10 +46,11 @@
             android:layout_gravity="center">
 
             <ImageView
+                android:id="@+id/dish_photo_r"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/default_food"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_food" />
 
         </androidx.cardview.widget.CardView>
 
@@ -76,57 +78,13 @@
         android:textSize="10dp"
         android:layout_marginBottom="5dp"/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/restaurantRecyclerView"
+        android:layout_width="313dp"
+        android:layout_height="410dp"
         android:layout_below="@+id/dish_subtext"
         android:layout_marginTop="10dp">
-        <LinearLayout
-            android:id="@+id/scroll_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:paddingTop="0dp">
-            <include
-                android:layout_marginTop="10dp"
-                android:id="@+id/layout1"
-                layout="@layout/restaurant_card"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pop_lf"
-                android:gravity="center"
-                />
 
-            <include
-                android:id="@+id/layout2"
-                layout="@layout/restaurant_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout1" />
-
-            <include
-                android:id="@+id/layout3"
-                layout="@layout/restaurant_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout2" />
-
-            <include
-                android:id="@+id/layout4"
-                layout="@layout/restaurant_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout3"
-                android:layout_marginBottom="50dp"/> <!-- last one special tag -->
-        </LinearLayout>
-    </ScrollView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

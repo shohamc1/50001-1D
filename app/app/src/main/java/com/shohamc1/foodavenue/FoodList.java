@@ -1,9 +1,16 @@
 package com.shohamc1.foodavenue;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,13 +26,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 public class FoodList extends MainActivity{
     RecyclerView recyclerView;
     LinkedList<FoodData> dishDatas = new LinkedList<>();
 
-    private LinkedList<Integer> images = new LinkedList<>();
-    private LinkedList<String> cuisines = new LinkedList<>();
+    //private LinkedList<Integer> images = new LinkedList<>();
+    //private LinkedList<String> cuisines = new LinkedList<>();
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +43,10 @@ public class FoodList extends MainActivity{
         setContentView(R.layout.dish_list);
         recyclerView = findViewById(R.id.charaRecyclerView);
         get_dishes();
-        //dishDatas.add(new FoodData("qwe","asd",R.drawable.default_food));
-        //dishDatas.add(new FoodData("rty","asd",R.drawable.default_food));
-        //dishDatas.add(new FoodData("uio","asd",R.drawable.default_food));
-        //dishDatas.add(new FoodData("asd","asd",R.drawable.default_food));
-        //dishDatas.add(new FoodData("fgh","asd",R.drawable.default_food));
-        //dishDatas.add(new FoodData("jkl","asd",R.drawable.default_food));
-        CharaAdapter adapter = new CharaAdapter(dishDatas);
-        recyclerView.setLayoutManager( new LinearLayoutManager( this ));
-        recyclerView.setAdapter(adapter);
 
-
+        //CharaAdapter adapter = new CharaAdapter(dishDatas);
+        //recyclerView.setLayoutManager( new LinearLayoutManager( this ));
+        //recyclerView.setAdapter(adapter);
     }
 
 
@@ -69,25 +70,56 @@ public class FoodList extends MainActivity{
                                 // add to card list
                                 String dishName=(String) doc.getData().get("dish");
                                 String cuisine=(String) doc.getData().get("cuisine");
+                                String description=(String) doc.getData().get("description");
 
-                                int resId=R.drawable.default_food;
-                                try {
-                                    Context ctx=getBaseContext();
-                                    resId = getResources().getIdentifier(dishName, "drawable", ctx.getPackageName());
-                                } catch (Exception e) {
-                                    resId=R.drawable.default_food;
+                                int resId;
+                                Context ctx=getBaseContext();
+                                resId = getResources().getIdentifier(dishName, "drawable", ctx.getPackageName());
+                                if (resId==0){
+                                    resId=resId=R.drawable.default_food;
                                 }
-                                finally {
-                                    dishDatas.add(new FoodData(dishName,cuisine,resId));
-                                }
-                                //System.out.println(dishNames);
+                                dishDatas.add(new FoodData(dishName,cuisine,description,resId));
+                                //System.out.println(dishName);
                             }
                         } else {
                             Log.i("e", "Could not get Firebase data");
                         }
 
-                        System.out.println("Dish names: ");
-                        System.out.println(dishDatas.toString());
+                        //System.out.println("Dish names: ");
+                        //System.out.println(dishDatas.toString());
+                        final CharaAdapter adapter = new CharaAdapter(dishDatas);
+                        recyclerView.setLayoutManager( new LinearLayoutManager(FoodList.this));
+                        adapter.setOnItemClickLitener(new CharaAdapter.OnItemClickLitener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+                                //Toast.makeText(FoodList.this,"this is"+dishDatas.get(position).dishName,Toast.LENGTH_LONG).show();
+                                Intent intent=new Intent(FoodList.this,RestaurantList.class);
+                                LinkedList<FoodData> filterData=adapter.getFiltedData();
+                                intent.putExtra("Description",filterData.get(position).description);
+                                intent.putExtra("DishName",filterData.get(position).dishName);
+                                intent.putExtra("ImageId",filterData.get(position).imageId);
+                                intent.putExtra("Cuisine",filterData.get(position).cuisine);
+                                startActivity(intent);
+                            }
+                        });
+                        recyclerView.setAdapter(adapter);
+                        EditText et = findViewById(R.id.search_bar);
+                        et.addTextChangedListener(new TextWatcher() {
+                            @Override
+                            public void beforeTextChanged(CharSequence sequence, int i, int i1, int i2) {
+
+                            }
+
+                            @Override
+                            public void onTextChanged(CharSequence sequence, int i, int i1, int i2) {
+                                adapter.getFilter().filter(sequence.toString());
+                            }
+
+                            @Override
+                            public void afterTextChanged(Editable editable) {
+
+                            }
+                        });
                     }
                 });
     }

@@ -17,7 +17,7 @@
         android:backgroundTint="@color/darkerOffWhite"
         android:id="@+id/search_layout">
 
-        <SearchView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/search_bar"

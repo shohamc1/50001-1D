@@ -4,21 +4,33 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedList;
+
+
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>{
-    private HashMap[] mDataset;
-
-    public RestaurantAdapter(HashMap[] myDataSet) {
-        mDataset = myDataSet;
+    LinkedList<RestaurantData> mRestaurantData;
+    private OnItemClickLitener mOnItemClickLitener;
+    public interface OnItemClickLitener{
+        void onItemClick(View view, int position);
     }
+
+    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener){
+        this.mOnItemClickLitener = mOnItemClickLitener;
+    }
+
+    public RestaurantAdapter(LinkedList<RestaurantData> restaurantDatas) {
+        this.mRestaurantData = restaurantDatas;
+        //this.images = images;
+    }
+
     @NonNull
     @Override
     public RestaurantViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -27,27 +39,37 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RestaurantViewHolder holder, int position) {
-        holder.text.setText((String)mDataset[position].get("name"));
-        //holder.image.setImageDrawable();
-
+    public void onBindViewHolder(@NonNull RestaurantViewHolder holder, final int position) {
+        RestaurantData restaurantData=mRestaurantData.get(position);
+        holder.text.setText(restaurantData.name_);
+        holder.image.setImageResource(restaurantData.resId);
+        //holder.image.setImageResource(images.get(position));
+        if (mOnItemClickLitener != null) {
+            holder.itemLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mOnItemClickLitener.onItemClick(view, position);
+                }
+            });
+        }
     }
 
     @Override
     public int getItemCount() {
-        return mDataset.length;
+        return mRestaurantData.size();
     }
 
     //code not shown
     static class RestaurantViewHolder extends RecyclerView.ViewHolder{
-        ImageView image;
-        TextView text;
-        public RestaurantViewHolder(@NonNull View itemView) {
+        protected ImageView image;
+        protected TextView text;
+        LinearLayout itemLayout;
+        public RestaurantViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.RestaurantImage);
             text = itemView.findViewById(R.id.RestaurantName);
+            itemLayout = itemView.findViewById(R.id.res_card);
         }
-
 
     }
 }
