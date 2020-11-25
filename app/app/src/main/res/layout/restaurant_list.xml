@@ -75,7 +75,7 @@
         android:text="Focaccia (Italian pronunciation: [foˈkattʃa]; Ligurian: fugassa [fyˈɡassa]) is a flat oven-baked Italian bread product similar in style and texture to pizza dough. Focaccia can be used as a side to many meals or as sandwich bread. Focaccia al rosmarino (focaccia with rosemary) is a common focaccia style in Italian cuisine that may be served as an antipasto, appetizer, table bread, or snack. "
         android:gravity="center"
         android:textStyle="italic"
-        android:textSize="10dp"
+        android:textSize="15dp"
         android:layout_marginBottom="5dp"/>
 
     <androidx.recyclerview.widget.RecyclerView

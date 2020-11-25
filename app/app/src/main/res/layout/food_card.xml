@@ -8,8 +8,10 @@ find a way to fix width, I think should look into parent layouts instead of this
     android:background="@drawable/rounded_corners"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingVertical="30dp"
-    android:paddingHorizontal="90dp"
+    android:paddingVertical="10dp"
+    android:paddingHorizontal="80dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="10dp"
     android:clickable="true"
     android:elevation="12dp"
     android:id="@+id/food_card"
@@ -40,12 +42,41 @@ find a way to fix width, I think should look into parent layouts instead of this
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
         android:textSize="20dp"
+        android:textAlignment="center"
         android:textColor="#000"
         android:textStyle="bold"
         android:text="Food Name"
         android:id="@+id/foodtext"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_round_stars_24"
+            android:scaleType="centerCrop"
+            android:gravity="center_vertical"
+            android:id="@+id/ratingImage" />
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/ratingImage"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="4.3"
+            android:textColor="#89000000"
+            android:textSize="15dp" />
+    </RelativeLayout>
 
 
 </LinearLayout>

@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -59,26 +60,26 @@ public class FoodList extends MainActivity{
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("dishes")
                 //.whereEqualTo("cuisine", "Desserts")
-                //.orderBy("rating", Query.Direction.DESCENDING)
+                .orderBy("rating", Query.Direction.DESCENDING)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for(QueryDocumentSnapshot doc: task.getResult()) {
-                                //System.out.println(doc.getData());
                                 // add to card list
-                                String dishName=(String) doc.getData().get("dish");
-                                String cuisine=(String) doc.getData().get("cuisine");
-                                String description=(String) doc.getData().get("description");
+                                String dishName = (String) doc.getData().get("dish");
+                                String cuisine = (String) doc.getData().get("cuisine");
+                                String description = (String) doc.getData().get("description");
+                                Double rating = (Double) doc.getData().get("rating");
 
                                 int resId;
                                 Context ctx=getBaseContext();
                                 resId = getResources().getIdentifier(dishName, "drawable", ctx.getPackageName());
-                                if (resId==0){
-                                    resId=resId=R.drawable.default_food;
+                                if (resId == 0){
+                                    resId = R.drawable.default_food;
                                 }
-                                dishDatas.add(new FoodData(dishName,cuisine,description,resId));
+                                dishDatas.add(new FoodData(dishName, cuisine, description, resId, rating));
                                 //System.out.println(dishName);
                             }
                         } else {
@@ -93,7 +94,7 @@ public class FoodList extends MainActivity{
                             @Override
                             public void onItemClick(View view, int position) {
                                 //Toast.makeText(FoodList.this,"this is"+dishDatas.get(position).dishName,Toast.LENGTH_LONG).show();
-                                Intent intent=new Intent(FoodList.this,RestaurantList.class);
+                                Intent intent=new Intent(FoodList.this, RestaurantList.class);
                                 LinkedList<FoodData> filterData=adapter.getFiltedData();
                                 intent.putExtra("Description",filterData.get(position).description);
                                 intent.putExtra("DishName",filterData.get(position).dishName);
@@ -112,7 +113,7 @@ public class FoodList extends MainActivity{
 
                             @Override
                             public void onTextChanged(CharSequence sequence, int i, int i1, int i2) {
-                                adapter.getFilter().filter(sequence.toString());
+                                adapter.getFilter().filter(sequence.toString().toLowerCase());
                             }
 
                             @Override
@@ -125,13 +126,14 @@ public class FoodList extends MainActivity{
     }
 
     public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {
-        HashMap map = new HashMap() {
-        };
+        HashMap map = new HashMap() {};
         Iterator<String> i1 = keys.iterator();
         Iterator<String> i2 = values.iterator();
+
         while (i1.hasNext() && i2.hasNext()) {
             map.put(i1.next(), i2.next());
         }
+
         return map;
     }
 }

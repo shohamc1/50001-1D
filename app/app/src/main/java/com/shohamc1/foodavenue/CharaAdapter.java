@@ -21,33 +21,35 @@ import java.util.List;
 public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHolder> implements Filterable {
     private LinkedList<FoodData> mFoodData;
     private LinkedList<FoodData> mFilterList;
-    private OnItemClickLitener   mOnItemClickLitener;
-    public interface OnItemClickLitener{
+    private OnItemClickLitener mOnItemClickLitener;
+
+    public interface OnItemClickLitener {
         void onItemClick(View view, int position);
     }
 
-    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener){
+    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener) {
         this.mOnItemClickLitener = mOnItemClickLitener;
     }
 
     public CharaAdapter(LinkedList<FoodData> dishnames) {
-         this.mFoodData = dishnames;
-         this.mFilterList=dishnames;
+        this.mFoodData = dishnames;
+        this.mFilterList = dishnames;
         //this.images = images;
     }
 
     @NonNull
     @Override
     public CharaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_card, parent,false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.food_card, parent, false);
         return new CharaViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CharaViewHolder holder, final int position) {
-        FoodData foodData=mFilterList.get(position);
+        FoodData foodData = mFilterList.get(position);
         holder.text.setText(foodData.dishName);
         holder.image.setImageResource(foodData.imageId);
+        holder.rating.setText(foodData.rating.toString());
         //holder.image.setImageResource(images.get(position));
         if (mOnItemClickLitener != null) {
             holder.itemLayout.setOnClickListener(new View.OnClickListener() {
@@ -75,8 +77,8 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
                 } else {
                     LinkedList<FoodData> filteredList = new LinkedList<>();
                     for (FoodData foodData : mFoodData) {
-                        //这里根据需求，添加匹配规则
-                        if (foodData.dishName.contains(charString)) {
+                        // add matching rules according to needs
+                        if (foodData.dishName.toLowerCase().contains(charString)) {
                             filteredList.add(foodData);
                         }
                     }
@@ -92,26 +94,30 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
                 mFilterList = (LinkedList<FoodData>) filterResults.values;
-                //刷新数据
+                // refresh data
                 notifyDataSetChanged();
             }
         };
     }
 
     //code not shown
-    static class CharaViewHolder extends RecyclerView.ViewHolder{
+    static class CharaViewHolder extends RecyclerView.ViewHolder {
         protected ImageView image;
         protected TextView text;
+        protected TextView rating;
         LinearLayout itemLayout;
+
         public CharaViewHolder(View itemView) {
             super(itemView);
             image = itemView.findViewById(R.id.foodimage);
             text = itemView.findViewById(R.id.foodtext);
+            rating = itemView.findViewById(R.id.ratingText);
             itemLayout = itemView.findViewById(R.id.food_card);
         }
 
     }
-    public LinkedList<FoodData> getFiltedData(){
+
+    public LinkedList<FoodData> getFiltedData() {
         return mFilterList;
     }
 }

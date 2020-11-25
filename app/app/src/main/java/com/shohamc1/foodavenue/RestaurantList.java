@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
@@ -40,21 +41,21 @@ public class RestaurantList extends AppCompatActivity {
     ImageView back;
 
     protected void onCreate(Bundle savedInstanceState) {
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //getSupportActionBar().hide();
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restaurant_list);
 
-        Intent intentFromFood =getIntent();
-        String description=intentFromFood.getStringExtra("Description");
-        String dishName=intentFromFood.getStringExtra("DishName");
-        int imageId=intentFromFood.getIntExtra("ImageId",R.drawable.default_food);
-        String cuisine=intentFromFood.getStringExtra("Cuisine");
+        Intent intentFromFood = getIntent();
+        String description = intentFromFood.getStringExtra("Description");
+        String dishName = intentFromFood.getStringExtra("DishName");
+        int imageId = intentFromFood.getIntExtra("ImageId", R.drawable.default_food);
+        String cuisine = intentFromFood.getStringExtra("Cuisine");
 
         setContentView(R.layout.restaurant_list);
         recyclerView = findViewById(R.id.restaurantRecyclerView);
-        get_restaurant(description,dishName,cuisine,imageId);
-        back=findViewById(R.id.food_back);
+        get_restaurant(description, dishName, cuisine, imageId);
+        back = findViewById(R.id.food_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,22 +77,20 @@ public class RestaurantList extends AppCompatActivity {
     }
 
 
-
-
-    public void get_restaurant(final String description, final String dishName, final String food_cuisine, final int imageId){
+    public void get_restaurant(final String description, final String dishName, final String food_cuisine, final int imageId) {
         //LinkedList<String> dishnames = new LinkedList<>();
         //text.setText(food in database);
         //image.setImage(image of food);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("restaurants")
                 //.whereEqualTo("cuisine", "Desserts")
-                //.orderBy("rating", Query.Direction.DESCENDING)
+                .orderBy("rating", Query.Direction.DESCENDING)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            for(QueryDocumentSnapshot doc: task.getResult()) {
+                            for (QueryDocumentSnapshot doc : task.getResult()) {
                                 //System.out.println(doc.getData());
                                 // add to card list
                                 String cuisine = (String) doc.getData().get("cuisine");
@@ -133,7 +132,7 @@ public class RestaurantList extends AppCompatActivity {
                         //System.out.println("Dish names: ");
                         System.out.println(restaurantDatas.toString());
                         RestaurantAdapter adapter = new RestaurantAdapter(restaurantDatas);
-                        recyclerView.setLayoutManager( new LinearLayoutManager(RestaurantList.this));
+                        recyclerView.setLayoutManager(new LinearLayoutManager(RestaurantList.this));
                         adapter.setOnItemClickLitener(new RestaurantAdapter.OnItemClickLitener() {
                             @Override
                             public void onItemClick(View view, int position) {
@@ -147,9 +146,9 @@ public class RestaurantList extends AppCompatActivity {
                             }
                         });
                         recyclerView.setAdapter(adapter);
-                        dish_photo=findViewById(R.id.dish_photo_r);
-                        dish_text=findViewById(R.id.dish_text);
-                        dish_subtext=findViewById(R.id.dish_subtext);
+                        dish_photo = findViewById(R.id.dish_photo_r);
+                        dish_text = findViewById(R.id.dish_text);
+                        dish_subtext = findViewById(R.id.dish_subtext);
 
                         dish_photo.setImageResource(imageId);
                         dish_text.setText(dishName);
@@ -158,7 +157,7 @@ public class RestaurantList extends AppCompatActivity {
                 });
     }
 
-    public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {
+    public HashMap<String, String> ListtoMap(List<String> keys, List<String> values) {
         HashMap map = new HashMap() {
         };
         Iterator<String> i1 = keys.iterator();
