@@ -10,7 +10,7 @@ public class FoodData {
     public FoodData(String dishName, String cuisine, String description, int imageId, Double rating) {
         this.dishName = dishName;
         this.cuisine = cuisine;
-        this.description=description;
+        this.description = description;
         this.imageId = imageId;
         this.rating = rating;
     }

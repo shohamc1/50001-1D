@@ -29,7 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-public class FoodList extends MainActivity{
+public class FoodList extends MainActivity {
     RecyclerView recyclerView;
     LinkedList<FoodData> dishDatas = new LinkedList<>();
 
@@ -51,9 +51,7 @@ public class FoodList extends MainActivity{
     }
 
 
-
-
-    public void get_dishes(){
+    public void get_dishes() {
         //LinkedList<String> dishnames = new LinkedList<>();
         //text.setText(food in database);
         //image.setImage(image of food);
@@ -66,7 +64,7 @@ public class FoodList extends MainActivity{
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            for(QueryDocumentSnapshot doc: task.getResult()) {
+                            for (QueryDocumentSnapshot doc : task.getResult()) {
                                 // add to card list
                                 String dishName = (String) doc.getData().get("dish");
                                 String cuisine = (String) doc.getData().get("cuisine");
@@ -74,9 +72,9 @@ public class FoodList extends MainActivity{
                                 Double rating = (Double) doc.getData().get("rating");
 
                                 int resId;
-                                Context ctx=getBaseContext();
+                                Context ctx = getBaseContext();
                                 resId = getResources().getIdentifier(dishName, "drawable", ctx.getPackageName());
-                                if (resId == 0){
+                                if (resId == 0) {
                                     resId = R.drawable.default_food;
                                 }
                                 dishDatas.add(new FoodData(dishName, cuisine, description, resId, rating));
@@ -89,17 +87,17 @@ public class FoodList extends MainActivity{
                         //System.out.println("Dish names: ");
                         //System.out.println(dishDatas.toString());
                         final CharaAdapter adapter = new CharaAdapter(dishDatas);
-                        recyclerView.setLayoutManager( new LinearLayoutManager(FoodList.this));
+                        recyclerView.setLayoutManager(new LinearLayoutManager(FoodList.this));
                         adapter.setOnItemClickLitener(new CharaAdapter.OnItemClickLitener() {
                             @Override
                             public void onItemClick(View view, int position) {
                                 //Toast.makeText(FoodList.this,"this is"+dishDatas.get(position).dishName,Toast.LENGTH_LONG).show();
-                                Intent intent=new Intent(FoodList.this, RestaurantList.class);
-                                LinkedList<FoodData> filterData=adapter.getFiltedData();
-                                intent.putExtra("Description",filterData.get(position).description);
-                                intent.putExtra("DishName",filterData.get(position).dishName);
-                                intent.putExtra("ImageId",filterData.get(position).imageId);
-                                intent.putExtra("Cuisine",filterData.get(position).cuisine);
+                                Intent intent = new Intent(FoodList.this, RestaurantList.class);
+                                LinkedList<FoodData> filterData = adapter.getFiltedData();
+                                intent.putExtra("Description", filterData.get(position).description);
+                                intent.putExtra("DishName", filterData.get(position).dishName);
+                                intent.putExtra("ImageId", filterData.get(position).imageId);
+                                intent.putExtra("Cuisine", filterData.get(position).cuisine);
                                 startActivity(intent);
                             }
                         });
@@ -125,8 +123,9 @@ public class FoodList extends MainActivity{
                 });
     }
 
-    public HashMap<String,String> ListtoMap(List<String> keys, List<String> values) {
-        HashMap map = new HashMap() {};
+    public HashMap<String, String> ListtoMap(List<String> keys, List<String> values) {
+        HashMap map = new HashMap() {
+        };
         Iterator<String> i1 = keys.iterator();
         Iterator<String> i2 = values.iterator();
 

@@ -16,14 +16,14 @@ import java.util.LinkedList;
 
 public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder> {
     LinkedList<RestaurantData> mRestaurantData;
-    private OnItemClickLitener mOnItemClickLitener;
+    private OnItemClickListener mOnItemClickListener;
 
-    public interface OnItemClickLitener {
+    public interface OnItemClickListener {
         void onItemClick(View view, int position);
     }
 
-    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener) {
-        this.mOnItemClickLitener = mOnItemClickLitener;
+    public void setOnItemClickListener(OnItemClickListener mOnItemClickListener) {
+        this.mOnItemClickListener = mOnItemClickListener;
     }
 
     public RestaurantAdapter(LinkedList<RestaurantData> restaurantDatas) {
@@ -45,11 +45,11 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Re
         holder.image.setImageResource(restaurantData.resId);
         holder.rating.setText(restaurantData.rating.toString());
         //holder.image.setImageResource(images.get(position));
-        if (mOnItemClickLitener != null) {
+        if (mOnItemClickListener != null) {
             holder.itemLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    mOnItemClickLitener.onItemClick(view, position);
+                    mOnItemClickListener.onItemClick(view, position);
                 }
             });
         }

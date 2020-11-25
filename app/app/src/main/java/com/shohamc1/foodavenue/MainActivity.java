@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document: task.getResult()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
                         //System.out.println(document.getData().get("name"));
                     }
                 } else {

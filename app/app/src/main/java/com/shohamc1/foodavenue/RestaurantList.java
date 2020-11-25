@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -133,7 +132,7 @@ public class RestaurantList extends AppCompatActivity {
                         System.out.println(restaurantDatas.toString());
                         RestaurantAdapter adapter = new RestaurantAdapter(restaurantDatas);
                         recyclerView.setLayoutManager(new LinearLayoutManager(RestaurantList.this));
-                        adapter.setOnItemClickLitener(new RestaurantAdapter.OnItemClickLitener() {
+                        adapter.setOnItemClickListener(new RestaurantAdapter.OnItemClickListener() {
                             @Override
                             public void onItemClick(View view, int position) {
                                 //Toast.makeText(RestaurantList.this, "this is" + restaurantDatas.get(position).name_, Toast.LENGTH_LONG).show();
