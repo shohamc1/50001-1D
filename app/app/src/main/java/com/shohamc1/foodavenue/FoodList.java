@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.common.base.CaseFormat;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -53,6 +54,29 @@ public class FoodList extends MainActivity {
 
     }
 
+    public String toCamelCase(String text) {
+        if (text == null || text.isEmpty()) {
+            return text;
+        }
+
+        StringBuilder converted = new StringBuilder();
+
+        boolean convertNext = true;
+        for (char ch : text.toCharArray()) {
+            if (Character.isSpaceChar(ch)) {
+                convertNext = true;
+            } else if (convertNext) {
+                ch = Character.toTitleCase(ch);
+                convertNext = false;
+            } else {
+                ch = Character.toLowerCase(ch);
+            }
+            converted.append(ch);
+        }
+
+        return converted.toString();
+    }
+
 
     public void get_dishes() {
         //LinkedList<String> dishnames = new LinkedList<>();
@@ -70,6 +94,7 @@ public class FoodList extends MainActivity {
                             for (QueryDocumentSnapshot doc : task.getResult()) {
                                 // add to card list
                                 String dishName = (String) doc.getData().get("dish");
+                                dishName = toCamelCase(dishName);
                                 String cuisine = (String) doc.getData().get("cuisine");
                                 String description = (String) doc.getData().get("description");
                                 Double rating = (Double) doc.getData().get("rating");
