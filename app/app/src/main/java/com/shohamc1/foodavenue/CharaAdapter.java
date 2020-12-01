@@ -81,6 +81,9 @@ public class CharaAdapter extends RecyclerView.Adapter<CharaAdapter.CharaViewHol
                         if (foodData.dishName.toLowerCase().contains(charString)) {
                             filteredList.add(foodData);
                         }
+                        if (foodData.cuisine.toLowerCase().contains(charString)) {
+                            filteredList.add(foodData);
+                        }
                     }
 
                     mFilterList = filteredList;

@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ import java.util.concurrent.CountDownLatch;
 public class FoodList extends MainActivity {
     RecyclerView recyclerView;
     LinkedList<FoodData> dishDatas = new LinkedList<>();
+    Button button2;
 
     //private LinkedList<Integer> images = new LinkedList<>();
     //private LinkedList<String> cuisines = new LinkedList<>();
@@ -48,6 +50,7 @@ public class FoodList extends MainActivity {
         //CharaAdapter adapter = new CharaAdapter(dishDatas);
         //recyclerView.setLayoutManager( new LinearLayoutManager( this ));
         //recyclerView.setAdapter(adapter);
+
     }
 
 
@@ -73,7 +76,9 @@ public class FoodList extends MainActivity {
 
                                 int resId;
                                 Context ctx = getBaseContext();
-                                resId = getResources().getIdentifier(dishName, "drawable", ctx.getPackageName());
+                                String imageName= new String(dishName);
+                                imageName=transferString(imageName);
+                                resId = getResources().getIdentifier(imageName, "drawable", ctx.getPackageName());
                                 if (resId == 0) {
                                     resId = R.drawable.default_food;
                                 }
@@ -134,6 +139,14 @@ public class FoodList extends MainActivity {
         }
 
         return map;
+    }
+
+    public String transferString(String s) {
+
+        s = s.replaceAll("[^a-zA-Z]", "");
+        s=s.toLowerCase();
+
+        return s;
     }
 }
 
