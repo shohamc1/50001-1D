@@ -29,20 +29,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/navbar"
-        android:text="Restaurant Name"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:textStyle="bold"
         android:textSize="40dp"
-        android:layout_marginTop="30dp"/>
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/rest_subtext"
+        android:id="@+id/rest_cuisine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rest_text"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:text="Dutch Colony Coffee Co. aspires to bring the best bean-to-cup experience, one cup at a time, all the time."
+        android:textSize="10dp"
+        android:textStyle="italic" />
+    <TextView
+        android:id="@+id/rest_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rest_cuisine"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
         android:textSize="10dp"
         android:textStyle="italic" />
 
@@ -50,7 +57,7 @@
         android:id="@+id/buttonToMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rest_subtext"
+        android:layout_below="@id/rest_rating"
         android:layout_marginHorizontal="5dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/rounded_corners"
