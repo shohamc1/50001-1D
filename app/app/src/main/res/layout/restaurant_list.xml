@@ -50,7 +50,7 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/default_food" />
+                 />
 
         </androidx.cardview.widget.CardView>
 
@@ -61,22 +61,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_photo"
-        android:text="Focaccia"
+        android:layout_marginTop="5dp"
         android:gravity="center"
-        android:textStyle="bold"
         android:textSize="40dp"
-        android:layout_marginTop="5dp"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dish_subtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dish_text"
-        android:text="Focaccia (Italian pronunciation: [foˈkattʃa]; Ligurian: fugassa [fyˈɡassa]) is a flat oven-baked Italian bread product similar in style and texture to pizza dough. Focaccia can be used as a side to many meals or as sandwich bread. Focaccia al rosmarino (focaccia with rosemary) is a common focaccia style in Italian cuisine that may be served as an antipasto, appetizer, table bread, or snack. "
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:textStyle="italic"
         android:textSize="15dp"
-        android:layout_marginBottom="5dp"/>
+        android:textStyle="italic" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/restaurantRecyclerView"
