@@ -141,6 +141,7 @@ public class RestaurantList extends AppCompatActivity {
                                 intent.putExtra("PostCode", restaurantDatas.get(position).post_code);
                                 intent.putExtra("ResId", restaurantDatas.get(position).resId);
                                 intent.putExtra("Cuisine", restaurantDatas.get(position).cuisine);
+                                intent.putExtra("Rating",restaurantDatas.get(position).rating);
                                 startActivity(intent);
                             }
                         });

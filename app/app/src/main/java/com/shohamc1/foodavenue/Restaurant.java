@@ -16,10 +16,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Restaurant extends AppCompatActivity {
+
     //private LinkedList<Integer> images = new LinkedList<>();
     //private LinkedList<String> cuisines = new LinkedList<>();
     TextView rest_text;
-    TextView rest_subtext;
+    TextView rest_cuisineText;
+    TextView rest_rating;
     Button buttonConvert;
     ImageView back;
 
@@ -30,12 +32,20 @@ public class Restaurant extends AppCompatActivity {
         setContentView(R.layout.restaurant);
 
         Intent intentFromRestaurant = getIntent();
-        final String name = intentFromRestaurant.getStringExtra("Name_");
+        String name = intentFromRestaurant.getStringExtra("Name_");
+        int postCode = intentFromRestaurant.getIntExtra("PostCode",000000);
+        //int imageId = intentFromRestaurant.getIntExtra("ResId", R.drawable.default_food);
+        Double rating=intentFromRestaurant.getDoubleExtra("Rating", R.drawable.default_food);
+        String cuisine = intentFromRestaurant.getStringExtra("Cuisine");
+        final String location=new Integer(postCode).toString();
 
-        buttonConvert = findViewById(R.id.buttonToMap);
-        rest_subtext = findViewById(R.id.rest_subtext);
-        rest_text = findViewById(R.id.rest_text);
-        back = findViewById(R.id.rest_back);
+        buttonConvert=findViewById(R.id.buttonToMap);
+        rest_cuisineText=findViewById(R.id.rest_cuisine);
+        rest_text=findViewById(R.id.rest_text);
+        rest_rating=findViewById(R.id.rest_rating);
+        back=findViewById(R.id.rest_back);
+        rest_rating.setText(rating.toString());
+        rest_cuisineText.setText(cuisine);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,19 +66,21 @@ public class Restaurant extends AppCompatActivity {
         buttonConvert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri.Builder builder = new Uri.Builder();
+                Uri.Builder builder=new Uri.Builder();
                 builder.scheme("geo")
                         .opaquePart("0.0")
-                        .appendQueryParameter("q", name);
-                Uri uriGeoLocation = builder.build();
+                        .appendQueryParameter("q",location);
+                Uri uriGeoLocation=builder.build();
 
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(uriGeoLocation);
                 try {
                     startActivity(intent);
-                } catch (Exception e) {
-                    Toast.makeText(Restaurant.this, "Map app not found", Toast.LENGTH_LONG).show();
                 }
+                catch(Exception e){
+                    Toast.makeText(Restaurant.this,"Map app not found",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
     }
