@@ -41,17 +41,46 @@
         android:layout_below="@+id/rest_text"
         android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:textSize="10dp"
-        android:textStyle="italic" />
-    <TextView
+        android:textSize="25dp" />
+
+    <!-- <TextView
         android:id="@+id/rest_rating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rest_cuisine"
         android:layout_marginBottom="5dp"
         android:gravity="center"
+        android:text="5.3"
         android:textSize="10dp"
-        android:textStyle="italic" />
+        android:textStyle="italic" /> -->
+
+    <RelativeLayout
+        android:id="@+id/rest_rating"
+        android:layout_below="@+id/rest_cuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_round_stars_24"
+            android:scaleType="centerCrop"
+            android:gravity="center_vertical"
+            android:id="@+id/ratingImage" />
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/ratingImage"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textColor="#89000000"
+            android:textSize="15dp" />
+    </RelativeLayout>
 
     <Button
         android:id="@+id/buttonToMap"
@@ -64,4 +93,6 @@
         android:backgroundTint="@color/paletteBlue"
         android:onClick="GoToMaps"
         android:text="Go to restaurant" />
+
+
 </RelativeLayout>

@@ -32,7 +32,7 @@ public class Restaurant extends AppCompatActivity {
         setContentView(R.layout.restaurant);
 
         Intent intentFromRestaurant = getIntent();
-        String name = intentFromRestaurant.getStringExtra("Name_");
+        final String name = intentFromRestaurant.getStringExtra("Name_");
         int postCode = intentFromRestaurant.getIntExtra("PostCode",000000);
         //int imageId = intentFromRestaurant.getIntExtra("ResId", R.drawable.default_food);
         Double rating=intentFromRestaurant.getDoubleExtra("Rating", R.drawable.default_food);
@@ -42,7 +42,7 @@ public class Restaurant extends AppCompatActivity {
         buttonConvert=findViewById(R.id.buttonToMap);
         rest_cuisineText=findViewById(R.id.rest_cuisine);
         rest_text=findViewById(R.id.rest_text);
-        rest_rating=findViewById(R.id.rest_rating);
+        rest_rating=findViewById(R.id.ratingText);
         back=findViewById(R.id.rest_back);
         rest_rating.setText(rating.toString());
         rest_cuisineText.setText(cuisine);
@@ -69,7 +69,7 @@ public class Restaurant extends AppCompatActivity {
                 Uri.Builder builder=new Uri.Builder();
                 builder.scheme("geo")
                         .opaquePart("0.0")
-                        .appendQueryParameter("q",location);
+                        .appendQueryParameter("q",name);
                 Uri uriGeoLocation=builder.build();
 
                 Intent intent = new Intent(Intent.ACTION_VIEW);
