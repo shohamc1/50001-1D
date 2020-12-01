@@ -11,10 +11,11 @@
         android:id="@+id/navbar">
 
         <ImageView
+            android:id="@+id/rest_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back_arrow"
-            android:layout_alignParentLeft="true"/> <!-- put on click here -->
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back_arrow" /> <!-- put on click here -->
 
         <ImageView
             android:layout_width="wrap_content"
@@ -24,35 +25,74 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/dish_text"
+        android:id="@+id/rest_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/navbar"
-        android:text="Restaurant Name"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:textStyle="bold"
         android:textSize="40dp"
-        android:layout_marginTop="30dp"/>
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/dish_subtext"
+        android:id="@+id/rest_cuisine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dish_text"
-        android:text="Dutch Colony Coffee Co. aspires to bring the best bean-to-cup experience, one cup at a time, all the time."
+        android:layout_below="@+id/rest_text"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
-        android:textStyle="italic"
+        android:textSize="25dp" />
+
+    <!-- <TextView
+        android:id="@+id/rest_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rest_cuisine"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="5.3"
         android:textSize="10dp"
-        android:layout_marginBottom="5dp"/>
+        android:textStyle="italic" /> -->
+
+    <RelativeLayout
+        android:id="@+id/rest_rating"
+        android:layout_below="@+id/rest_cuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_round_stars_24"
+            android:scaleType="centerCrop"
+            android:gravity="center_vertical"
+            android:id="@+id/ratingImage" />
+
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/ratingImage"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textColor="#89000000"
+            android:textSize="15dp" />
+    </RelativeLayout>
 
     <Button
+        android:id="@+id/buttonToMap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/dish_subtext"
-        android:background="@drawable/rounded_corners"
-        android:backgroundTint="@color/paletteBlue"
+        android:layout_below="@id/rest_rating"
         android:layout_marginHorizontal="5dp"
         android:layout_marginTop="10dp"
-        android:text="Go to restaurant"
-        android:onClick="GoToMaps" />
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/paletteBlue"
+        android:onClick="GoToMaps"
+        android:text="Go to restaurant" />
+
+
 </RelativeLayout>

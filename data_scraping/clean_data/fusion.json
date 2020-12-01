@@ -1,0 +1,62 @@
+[
+  {
+    "name": "The Beast",
+    "rating": 4.1,
+    "post_code": 199329,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "The Assembly Ground",
+    "rating": 4.4,
+    "post_code": 229233,
+    "cuisine": "Desserts,Fusion"
+  },
+  {
+    "name": "Meat n' Chill",
+    "rating": 4.4,
+    "post_code": 279883,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "The Armoury",
+    "rating": 4,
+    "post_code": 189766,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "The Coffee Academics",
+    "rating": 3.7,
+    "post_code": 179103,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Brine",
+    "rating": 4.5,
+    "post_code": 198743,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Black Pearl",
+    "rating": 3.9,
+    "post_code": 455222,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Dumplings.ru",
+    "rating": 4.5,
+    "post_code": "069115",
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Eleven Strands",
+    "rating": 4.3,
+    "post_code": 545568,
+    "cuisine": "Fusion"
+  },
+  {
+    "name": "Ryan's Kitchen",
+    "rating": 4.2,
+    "post_code": 237994,
+    "cuisine": "Fusion"
+  }
+]

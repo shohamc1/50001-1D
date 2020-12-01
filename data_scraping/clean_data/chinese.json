@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Beng Hiang Restaurant",
+    "rating": 3.9,
+    "post_code": 600135,
+    "cuisine": "Seafood,Chinese"
+  },
+  {
+    "name": "Crystal Jade Hong Kong Kitchen",
+    "rating": 3.8,
+    "post_code": 238872,
+    "cuisine": "Chinese"
+  },
+  {
+    "name": "Tong Le Private Dining",
+    "rating": 4.2,
+    "post_code": "049322",
+    "cuisine": "Chinese"
+  },
+  {
+    "name": "Tsui Wah",
+    "rating": 4,
+    "post_code": 179020,
+    "cuisine": "Chinese"
+  },
+  {
+    "name": "Fook Kin",
+    "rating": 4.3,
+    "post_code": 239553,
+    "cuisine": "Chinese"
+  },
+  {
+    "name": "Jin Yu Man Tang Dessert Shop",
+    "rating": 4.1,
+    "post_code": 428778,
+    "cuisine": "Desserts"
+  },
+  {
+    "name": "Flavours by Saute",
+    "rating": 4.3,
+    "post_code": 179105,
+    "cuisine": "Chinese,Fusion"
+  },
+  {
+    "name": "Restaurant Aisyah",
+    "rating": 4.5,
+    "post_code": "068624",
+    "cuisine": "Chinese"
+  },
+  {
+    "name": "Eventasty Noodle Bar",
+    "rating": 4.4,
+    "post_code": 179097,
+    "cuisine": "Chinese"
+  },
+  {
+    "name": "Dumpling Darlings",
+    "rating": 4.4,
+    "post_code": "069870",
+    "cuisine": "Chinese"
+  }
+]

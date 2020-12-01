@@ -1,0 +1,686 @@
+[
+  {
+    "dish": "Bak kut teh",
+    "description": "pork rib soup made with a variety of Chinese herbs and spices.",
+    "cuisine": "Chinese",
+    "rating": 3.35
+  },
+  {
+    "dish": "Beef kway teow",
+    "description": "flat rice noodles stir-fried with beef, served dry or with soup.",
+    "cuisine": "Chinese",
+    "rating": 3.61
+  },
+  {
+    "dish": "Bak chang",
+    "description": "glutinous rice dumplings, usually filled with pork, mushrooms and stewed egg, steamed in bamboo leaves. Although it is Chinese in origin, it is also a favourite in Peranakan cuisine.",
+    "cuisine": "Chinese",
+    "rating": 3.17
+  },
+  {
+    "dish": "Bak Chor Mee",
+    "description": "egg noodles with minced pork, braised mushroom, pork meatball and other ingredients, served dry or in soup. Usually the flat, tape-like mee pok noodle is used.",
+    "cuisine": "Chinese",
+    "rating": 4.57
+  },
+  {
+    "dish": "Ban mian",
+    "description": "hand-made flat noodles served with vegetables, minced meat, sliced mushrooms, and an egg in an anchovy-based soup. Noodle variations are common. Ban mian refers to flat, long noodles; mee hoon kuay refers to flat, rectangular noodles; you mian refers to thin noodles.",
+    "cuisine": "Chinese",
+    "rating": 3.13
+  },
+  {
+    "dish": "Chai tow kway",
+    "description": "also known as char kway or carrot cake, is a dish of steamed radish/daikon cakes diced and stir-fried with garlic, egg, chopped preserved radish, and sometimes with shrimp. This dish comes in black (fried with sweet dark soy sauce) or white (fried into an omelette) versions, with a chilli paste sometimes added.",
+    "cuisine": "Chinese",
+    "rating": 4.15
+  },
+  {
+    "dish": "Char kway teow",
+    "description": "thick, flat rice noodles stir-fried in dark soy sauce with shrimp, eggs, beansprouts, fish cake, cockles, green leafy vegetables, Chinese sausage and fried cubes of lard.",
+    "cuisine": "Chinese",
+    "rating": 3.04
+  },
+  {
+    "dish": "Char siu",
+    "description": "also romanised cha-su, cha siu, cha sio, caa siu and char siew, is barbecued pork in Cantonese cuisine.",
+    "cuisine": "Chinese",
+    "rating": 4.58
+  },
+  {
+    "dish": "Chicken noodles",
+    "description": "an egg noodle dish with diced chicken meat.",
+    "cuisine": "Chinese",
+    "rating": 4.21
+  },
+  {
+    "dish": "Chwee kueh",
+    "description": "a type of steamed rice cake served with preserved radish.",
+    "cuisine": "Chinese",
+    "rating": 4.55
+  },
+  {
+    "dish": "Crab bee hoon",
+    "description": "a rice vermicelli dish served with whole mud crab. It may be served dry or in soup and sometimes in a claypot.",
+    "cuisine": "Chinese",
+    "rating": 4.67
+  },
+  {
+    "dish": "Drunken prawns",
+    "description": "prawns cooked with rice wine.",
+    "cuisine": "Chinese",
+    "rating": 4.11
+  },
+  {
+    "dish": "Duck rice",
+    "description": "braised duck served with rice cooked with yam and shrimp. It can be served simply with white rice and a thick dark sauce, or with braised hard-boiled eggs, preserved salted vegetables, and hard bean curd (tau kua) on the side. Teochew boneless duck rice is a similar, but a more refined dish. The duck is deboned and sliced thinly, allowing the sauces to seep into the meat. Roasted duck rice is also commonly sold.",
+    "cuisine": "Chinese",
+    "rating": 3.16
+  },
+  {
+    "dish": "Fish ball noodles",
+    "description": "similar to bak chor mee, except that fish balls are used instead of minced pork.",
+    "cuisine": "Chinese",
+    "rating": 3.57
+  },
+  {
+    "dish": "Fish soup bee hoon",
+    "description": "a Singaporean soup-based served hot with bee hoon.",
+    "cuisine": "Chinese",
+    "rating": 4.07
+  },
+  {
+    "dish": "Frog Leg porridge",
+    "description": "is served with frog legs, scallion, ginger and thick black sauce in a claypot with porridge in another claypot.",
+    "cuisine": "Chinese",
+    "rating": 3.13
+  },
+  {
+    "dish": "Hae mee",
+    "description": "stir-fried prawn noodles cooked in a broth made from prawn heads and pork bones, topped with ingredients such as prawns, sliced pork belly, squid, egg, lard, and served with sambal chilli and lime at the side.",
+    "cuisine": "Chinese",
+    "rating": 4.48
+  },
+  {
+    "dish": "Hainanese chicken rice",
+    "description": "based on the Hainanese dish Wenchang chicken. It is considered Singapore's national dish.",
+    "cuisine": "Chinese",
+    "rating": 3.48
+  },
+  {
+    "dish": "Hainanese curry rice",
+    "description": "is a dish consisting of steamed white rice smothered in a mess of curries and braised gravy.",
+    "cuisine": "Chinese",
+    "rating": 3.27
+  },
+  {
+    "dish": "Har cheong gai",
+    "description": "shrimp paste chicken - chicken wings fried in a batter with fermented shrimp paste.",
+    "cuisine": "Chinese",
+    "rating": 3.13
+  },
+  {
+    "dish": "Hokkien mee",
+    "description": "egg noodles and rice noodles stir-fried with egg, slices of pork, prawns and squid, and served and garnished with spring onion, lard, sambal chilli and lime (for adding lime juice to the dish).",
+    "cuisine": "Chinese",
+    "rating": 4.94
+  },
+  {
+    "dish": "Hum chim peng",
+    "description": "a deep-fried bun-like pastry sometimes filled with bean paste.",
+    "cuisine": "Chinese",
+    "rating": 4.97
+  },
+  {
+    "dish": "Kaya toast",
+    "description": "a traditional breakfast dish. Kaya is a sweet coconut and egg jam which is spread over toasted bread. Combined with a cup of local coffee and a half-boiled egg, this constitutes a typical Singaporean breakfast.",
+    "cuisine": "Chinese",
+    "rating": 3.07
+  },
+  {
+    "dish": "Kuay chap",
+    "description": "a Teochew dish of flat, broad rice sheets in a soup made with dark soy sauce, served with pig offal, braised duck meat, various kinds of beancurd, preserved salted vegetables, and braised hard-boiled eggs.",
+    "cuisine": "Chinese",
+    "rating": 3.76
+  },
+  {
+    "dish": "Mee pok",
+    "description": "a noodle dish characterised by its flat and yellow appearance, varying in thickness and width.",
+    "cuisine": "Chinese",
+    "rating": 4.36
+  },
+  {
+    "dish": "Min chiang kueh",
+    "description": "a thick, chewy pancake with a ground peanut and sugar filling. Other variations include grated coconut and red bean paste. This traditional snack also is served in blueberry, cheese and chocolate varieties.",
+    "cuisine": "Chinese",
+    "rating": 3.21
+  },
+  {
+    "dish": "Oyster omelette",
+    "description": "a dish of omelette cooked with fresh raw oysters,tapioca starch and eggs.",
+    "cuisine": "Chinese",
+    "rating": 4.73
+  },
+  {
+    "dish": "Pig's brain soup",
+    "description": "a soup dish comprising pig brain with Chinese herbs.",
+    "cuisine": "Chinese",
+    "rating": 3.33
+  },
+  {
+    "dish": "Pig fallopian tubes",
+    "description": "a dish comprising stir-fried pig Fallopian tubes with vegetables and sambal chilli.",
+    "cuisine": "Chinese",
+    "rating": 4.03
+  },
+  {
+    "dish": "Pig's organ soup",
+    "description": "a soup-based variant of kuay chap",
+    "cuisine": "Chinese",
+    "rating": 3.2
+  },
+  {
+    "dish": "Pig's trotters",
+    "description": "usually braised in black sauce and vinegar.",
+    "cuisine": "Chinese",
+    "rating": 4.74
+  },
+  {
+    "dish": "Popiah",
+    "description": "Hokkien/Teochew-style spring roll or rolled crêpe, stuffed with stewed turnip, Chinese sausage, shrimp and lettuce.",
+    "cuisine": "Chinese",
+    "rating": 3.25
+  },
+  {
+    "dish": "Shredded chicken noodles",
+    "description": "a noodles dish topped with shredded chicken, fish dumpling and mushroom.",
+    "cuisine": "Chinese",
+    "rating": 3.57
+  },
+  {
+    "dish": "Sliced fish soup",
+    "description": "a soup dish consisting of fish and vegetables.",
+    "cuisine": "Chinese",
+    "rating": 3.07
+  },
+  {
+    "dish": "Soon kway",
+    "description": "a white vegetable dumpling with black soy sauce.",
+    "cuisine": "Chinese",
+    "rating": 3.48
+  },
+  {
+    "dish": "Teochew porridge",
+    "description": "a rice porridge dish consumed with a selection of local side dishes.",
+    "cuisine": "Chinese",
+    "rating": 4.11
+  },
+  {
+    "dish": "Turtle soup",
+    "description": "a soup or stew made from turtle flesh.",
+    "cuisine": "Chinese",
+    "rating": 4.82
+  },
+  {
+    "dish": "Vegetarian bee hoon",
+    "description": "thin braised rice vermicelli to which a choice of various gluten, vegetable, or beancurd-based delicacies may be added.",
+    "cuisine": "Chinese",
+    "rating": 3.96
+  },
+  {
+    "dish": "Yong Tau Foo",
+    "description": "a dish that contains a varied selection of food items, including tofu filled with ground meat mixture or fish paste, fish balls, crab sticks, an assortment of vegetables and meat.",
+    "cuisine": "Chinese",
+    "rating": 3.83
+  },
+  {
+    "dish": "Youtiao",
+    "description": "also called yew char kueh, fried dough crullers similar to those served in other Chinese cuisines around the world.",
+    "cuisine": "Chinese",
+    "rating": 3.29
+  },
+  {
+    "dish": "Acar",
+    "description": "pickled vegetables or fruits with dried chilli, peanuts, and spices. Indian and Peranakan versions can also be found.",
+    "cuisine": "Malay",
+    "rating": 4.79
+  },
+  {
+    "dish": "Assam pedas",
+    "description": "seafood and vegetables cooked in a sauce consisting of tamarind, coconut milk, chilli, and spices.",
+    "cuisine": "Malay",
+    "rating": 4.61
+  },
+  {
+    "dish": "Ayam penyet",
+    "description": "fried chicken dish consisting of fried chicken that is smashed with the pestle against mortar to make it softer and a relatively new culinary phenomenon of Indonesian origin.",
+    "cuisine": "Malay",
+    "rating": 3.45
+  },
+  {
+    "dish": "Bakso",
+    "description": "also Ba'so, meatballs served with noodles.",
+    "cuisine": "Malay",
+    "rating": 4.92
+  },
+  {
+    "dish": "Begedil",
+    "description": "mashed potato mixture that is fried into patties and eaten together with mee soto.",
+    "cuisine": "Malay",
+    "rating": 4.03
+  },
+  {
+    "dish": "Curry puff",
+    "description": "also known as epok-epok, a flaky pastry usually stuffed with curry chicken, potato cubes, and a slice of hard-boiled egg. Sardines are sometimes used in place of chicken.",
+    "cuisine": "Malay",
+    "rating": 3.8
+  },
+  {
+    "dish": "Dendeng paru",
+    "description": "a dish of dried beef lung cooked in spices.",
+    "cuisine": "Malay",
+    "rating": 4.54
+  },
+  {
+    "dish": "Goreng pisang",
+    "description": "bananas rolled in flour, fried, and eaten as a snack.",
+    "cuisine": "Malay",
+    "rating": 3.95
+  },
+  {
+    "dish": "Gudeg putih",
+    "description": "white jackfruit curry.",
+    "cuisine": "Malay",
+    "rating": 4.13
+  },
+  {
+    "dish": "Gulai daun ubi",
+    "description": "sweet potato leaves stewed in coconut milk.",
+    "cuisine": "Malay",
+    "rating": 3.79
+  },
+  {
+    "dish": "Keropok",
+    "description": "deep fried crackers usually flavoured with shrimp, but sometimes with fish or vegetables.",
+    "cuisine": "Malay",
+    "rating": 4.07
+  },
+  {
+    "dish": "Ketupat",
+    "description": "rice cakes steamed in a square-shaped coconut leaf wrapping and usually served with satay.",
+    "cuisine": "Malay",
+    "rating": 4.52
+  },
+  {
+    "dish": "Lemak siput",
+    "description": "shellfish cooked in a thick coconut milk-based gravy.",
+    "cuisine": "Malay",
+    "rating": 4.43
+  },
+  {
+    "dish": "Lontong",
+    "description": "compressed rice cakes (see ketupat) in a spicy vegetable soup.",
+    "cuisine": "Malay",
+    "rating": 3.32
+  },
+  {
+    "dish": "Nagasari",
+    "description": "a rice snack with Indonesian origins.",
+    "cuisine": "Malay",
+    "rating": 4.34
+  },
+  {
+    "dish": "Nasi goreng",
+    "description": "steamed rice stir-fried in a wok, often mixed with other ingredients, such as eggs, vegetables and meat.",
+    "cuisine": "Malay",
+    "rating": 3.4
+  },
+  {
+    "dish": "Nasi Padang",
+    "description": "a steamed white rice served with an array – sometimes as many as 12, or more – of pre-cooked dishes, the mini banquet usually laid out style in small plates.",
+    "cuisine": "Malay",
+    "rating": 3.68
+  },
+  {
+    "dish": "Otah",
+    "description": "spicy fish cake grilled in a banana leaf wrapping.",
+    "cuisine": "Malay",
+    "rating": 3.05
+  },
+  {
+    "dish": "Pecel lele",
+    "description": "fried catfish served with chilli paste.",
+    "cuisine": "Malay",
+    "rating": 3.03
+  },
+  {
+    "dish": "Rawon",
+    "description": "beef soup.",
+    "cuisine": "Malay",
+    "rating": 3.03
+  },
+  {
+    "dish": "Rojak bandung",
+    "description": "a variant of Singaporean style rojak.",
+    "cuisine": "Malay",
+    "rating": 3.23
+  },
+  {
+    "dish": "Roti john",
+    "description": "an omelette sandwich.",
+    "cuisine": "Malay",
+    "rating": 4.78
+  },
+  {
+    "dish": "Sambal",
+    "description": "not a dish in itself, but a common chilli-based accompaniment to most foods.",
+    "cuisine": "Malay",
+    "rating": 4.15
+  },
+  {
+    "dish": "Satay",
+    "description": "grilled meat on skewers served with satay sauce (a spicy peanut sauce) and usually eaten with ketupat, cucumber and onions.",
+    "cuisine": "Malay",
+    "rating": 4.15
+  },
+  {
+    "dish": "Sayur lodeh",
+    "description": "a mix of vegetables in coconut milk.",
+    "cuisine": "Malay",
+    "rating": 3.98
+  },
+  {
+    "dish": "Soto",
+    "description": "a soup dish mainly composed of meat and vegetables.",
+    "cuisine": "Malay",
+    "rating": 3.78
+  },
+  {
+    "dish": "Soto ayam",
+    "description": "a spicy chicken soup that features chicken shreds, rice cakes and sometimes begedil.",
+    "cuisine": "Malay",
+    "rating": 4.98
+  },
+  {
+    "dish": "Tumpeng",
+    "description": "a cone-shaped rice dish of Javanese origin. It is served with side dishes of vegetables and meat.",
+    "cuisine": "Malay",
+    "rating": 3.75
+  },
+  {
+    "dish": "Appam",
+    "description": "a fermented rice pancake.",
+    "cuisine": "Indian",
+    "rating": 3.38
+  },
+  {
+    "dish": "Dosa",
+    "description": "rice and lentil pancake. Commonly served as a masala\" version that includes spiced potatoes and is served with different types of sambar.",
+    "cuisine": "Indian",
+    "rating": 3.21
+  },
+  {
+    "dish": "Murtabak",
+    "description": "an Indian-Muslim dish originating from the Middle East. It consists of folded dough stuffed with spiced minced meat, onions and egg, and is often served with curry.",
+    "cuisine": "Indian",
+    "rating": 3.81
+  },
+  {
+    "dish": "Naan",
+    "description": "an Indian oven-baked flatbread.",
+    "cuisine": "Indian",
+    "rating": 4.97
+  },
+  {
+    "dish": "Putu mayam",
+    "description": "rice flour noodle served with sugar and coconut usually eaten for breakfast.",
+    "cuisine": "Indian",
+    "rating": 3.17
+  },
+  {
+    "dish": "Roti prata",
+    "description": "a local evolution of the Pakistani and Indian paratha. It is a popular dish for breakfast and supper. It is a fried bread pancake that is crispy on the outside and soft on the inside. The dough is flipped to attain the right texture, then cooked quickly on a greased stove and served with curry or sugar. A plethora of modern variations are available, including egg, cheese, chocolate, masala, durian and even ice cream.",
+    "cuisine": "Indian",
+    "rating": 4.34
+  },
+  {
+    "dish": "Soup kambing",
+    "description": "a local Tamil-Muslim dish of spiced mutton soup.",
+    "cuisine": "Indian",
+    "rating": 3.08
+  },
+  {
+    "dish": "Soup tulang",
+    "description": "a local Tamil-Muslim dish of mutton or beef leg bones stewed in a spice. The bones are broken to allow the marrow to be eaten.",
+    "cuisine": "Indian",
+    "rating": 4.65
+  },
+  {
+    "dish": "Soup tulang merah",
+    "description": "a dish consisting of mutton or beef bones stewed in a sweet and spicy red soup of mutton stock, tomatoes, ginger, chillies and spices.  It's considered a Singapore invention",
+    "cuisine": "Indian",
+    "rating": 3.75
+  },
+  {
+    "dish": "Tandoori chicken",
+    "description": "chicken marinated in a mixture of spices and yogurt and cooked in a clay oven.",
+    "cuisine": "Indian",
+    "rating": 3.2
+  },
+  {
+    "dish": "Vadai",
+    "description": "spicy, deep-fried snacks that are made from dhal, lentils or potato.",
+    "cuisine": "Indian",
+    "rating": 3.18
+  },
+  {
+    "dish": "Ayam buah keluak",
+    "description": "a Peranakan dish of chicken stewed with spices and Southeast Asian black nuts (buah keluak).",
+    "cuisine": "Fusion",
+    "rating": 3.69
+  },
+  {
+    "dish": "Biryani (Indian variant) or Nasi Briyani (Malay variant)",
+    "description": "a popular mixed rice dish commonly found in places offering Malay or Indian food.",
+    "cuisine": "Fusion",
+    "rating": 3.24
+  },
+  {
+    "dish": "Cereal prawns (麦片虾; mài piàn xiā)",
+    "description": "stir-fried prawns with sweetened cereal.",
+    "cuisine": "Fusion",
+    "rating": 4.14
+  },
+  {
+    "dish": "Chili Crab Pasta",
+    "description": "pasta served with chili crab.",
+    "cuisine": "Fusion",
+    "rating": 3.95
+  },
+  {
+    "dish": "Curry laksa",
+    "description": "a Peranakan dish of vermicelli noodles and fried bean curd served in a creamy coconut sauce with slices of shrimp, fish, and cockles. Can be served in a tamarind-filled variant with shredded mackerel and mangosteen.",
+    "cuisine": "Fusion",
+    "rating": 4.24
+  },
+  {
+    "dish": "Fish head curry",
+    "description": "a dish created by Singapore's Malayalee (an Indian ethnic group from Kerala) community with some Chinese and Malay influences. The head of a red snapper (ikan merah, literally red fish\") stewed in curry consisting of varying amounts of coconut milk and tamarind juice",
+    "cuisine": "Fusion",
+    "rating": 3.29
+  },
+  {
+    "dish": "Kari debal",
+    "description": "a Eurasian Singaporean curry dish with Portuguese and Peranakan influences. Includes chicken, cabbage, sausage, and bacon pieces stewed in a curry sauce.",
+    "cuisine": "Fusion",
+    "rating": 4.87
+  },
+  {
+    "dish": "Kari lemak ayam",
+    "description": "a Peranakan chicken curry with a coconut milk base",
+    "cuisine": "Fusion",
+    "rating": 3.44
+  },
+  {
+    "dish": "Katong Laksa",
+    "description": "a Singaporean thick rice noodles (bee hoon) in a coconut curry gravy with prawn and egg. Sometimes chicken, tau pok (beancurd puffs) or fish cake may be added.",
+    "cuisine": "Fusion",
+    "rating": 3.94
+  },
+  {
+    "dish": "Kueh Tutu",
+    "description": "steamed rice flour pastries with a sweet shredded coconut or peanut filling",
+    "cuisine": "Fusion",
+    "rating": 3.34
+  },
+  {
+    "dish": "Kueh Pie Tee",
+    "description": "a thin and crispy pastry tart shell filled with a spicy, sweet mixture of thinly sliced vegetables and prawns.",
+    "cuisine": "Fusion",
+    "rating": 3.29
+  },
+  {
+    "dish": "Kway teow goreng",
+    "description": "stir-fried flat rice noodles.",
+    "cuisine": "Fusion",
+    "rating": 3.31
+  },
+  {
+    "dish": "Mee rebus",
+    "description": "egg noodles with a spicy slightly sweet curry-like gravy. The gravy is made from sweet potatoes, curry powder, water, salted soybeans, dried shrimp and peanuts.",
+    "cuisine": "Fusion",
+    "rating": 4.32
+  },
+  {
+    "dish": "Mee siam",
+    "description": "a dish of thin rice vermicelli.",
+    "cuisine": "Fusion",
+    "rating": 4.34
+  },
+  {
+    "dish": "Mee goreng",
+    "description": "yellow egg noodles stir fried with ghee, tomato sauce, chilli, eggs, vegetables, and various meats and seafood.",
+    "cuisine": "Fusion",
+    "rating": 4.02
+  },
+  {
+    "dish": "Mee soto",
+    "description": "a spicy noodle soup dish.",
+    "cuisine": "Fusion",
+    "rating": 4.33
+  },
+  {
+    "dish": "Rojak",
+    "description": "a traditional fruit and vegetable salad dish of Indian origin and with Malay/Indonesian influences.",
+    "cuisine": "Fusion",
+    "rating": 3.76
+  },
+  {
+    "dish": "Sambal kangkong",
+    "description": "a dish of water spinach (kangkong) fried in sambal.",
+    "cuisine": "Fusion",
+    "rating": 4.02
+  },
+  {
+    "dish": "Satay bee hoon",
+    "description": "rice noodles served with cuttlefish, fried bean curd puffs, cockles and water spinach in satay sauce.",
+    "cuisine": "Fusion",
+    "rating": 3.27
+  },
+  {
+    "dish": "Tauhu goreng",
+    "description": "fried bean curd with sweet sauce.",
+    "cuisine": "Fusion",
+    "rating": 3.95
+  },
+  {
+    "dish": "Black pepper crab",
+    "description": "hard shell crabs cooked in a black pepper sauce. Salted Egg crab and buttermilk crab are also common.",
+    "cuisine": "Seafood",
+    "rating": 3.5
+  },
+  {
+    "dish": "Chilli crab",
+    "description": "hard shell crabs cooked in chilli sauce, usually served with man tou, or deep fried buns.",
+    "cuisine": "Seafood",
+    "rating": 3.62
+  },
+  {
+    "dish": "Oyster omelette",
+    "description": "an oyster omelette mixed with flour and fried, served garnished with coriander.",
+    "cuisine": "Seafood",
+    "rating": 3.75
+  },
+  {
+    "dish": "Sambal lala",
+    "description": "soft shell clams fried with sambal sauce",
+    "cuisine": "Seafood",
+    "rating": 4.17
+  },
+  {
+    "dish": "Sambal stingray",
+    "description": "smothered in sambal and served on banana leaf, also known as ikan bakar in Malay.",
+    "cuisine": "Seafood",
+    "rating": 3.77
+  },
+  {
+    "dish": "Bubur cha cha",
+    "description": "a dish of pearled sago, sweet potatoes, yams, bananas, black-eyed peas, pandan leaves, sugar, and salt cooked in coconut milk and served hot or cold.",
+    "cuisine": "Dessert",
+    "rating": 3.73
+  },
+  {
+    "dish": "Chendol",
+    "description": "basic version consist of pandan jelly strips with coconut milk and gula melaka syrup with shaved iced; other ingredients which could be added are red beans, sweet corns, ice cream and even durians.",
+    "cuisine": "Dessert",
+    "rating": 4.66
+  },
+  {
+    "dish": "Cheng tng",
+    "description": "a light, refreshing soup with longan, barley, agar strips, lotus seeds and a sweet syrup, served either hot or cold. It is analogous to the Cantonese Ching bo leung.",
+    "cuisine": "Dessert",
+    "rating": 3.7
+  },
+  {
+    "dish": "Ice kacang",
+    "description": "a mound of grated ice on a base consisting of jelly, red beans, corn and attap seeds, topped with various kinds of coloured sugar syrups, palm sugar, rose syrup and evaporated milk.",
+    "cuisine": "Dessert",
+    "rating": 3.16
+  },
+  {
+    "dish": "Kuih or kueh",
+    "description": "small cakes or coconut milk based desserts that come in a variety of flavours, usually containing fruit such as durian or banana. Pandan is a common flavouring.",
+    "cuisine": "Dessert",
+    "rating": 4.9
+  },
+  {
+    "dish": "Kueh lapis",
+    "description": "a rich, multi-layered cake-style kueh using a large amount of egg whites and studded with prunes.",
+    "cuisine": "Dessert",
+    "rating": 3.35
+  },
+  {
+    "dish": "Lapis sagu",
+    "description": "a popular kueh with layers of alternating colour and a sweet, coconut taste.",
+    "cuisine": "Dessert",
+    "rating": 4.64
+  },
+  {
+    "dish": "Orh-nee",
+    "description": "a Teochew dish consisting of taro (locally known as yam) paste, coconut paste and ginkgo nuts.",
+    "cuisine": "Dessert",
+    "rating": 3.56
+  },
+  {
+    "dish": "Pulut hitam",
+    "description": "a creamy dessert made of black glutinous rice and served with coconut cream.",
+    "cuisine": "Dessert",
+    "rating": 4.98
+  },
+  {
+    "dish": "Tau suan",
+    "description": "mung beans in jelly, served hot with dough crullers.",
+    "cuisine": "Dessert",
+    "rating": 3.77
+  }
+]

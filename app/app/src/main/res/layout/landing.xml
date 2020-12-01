@@ -33,11 +33,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_text"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="Get Started"
         android:background="@drawable/rounded_corners"
-        android:onClick="change_layout"/>
+        android:text="Get Started" />
 
 
 </RelativeLayout>

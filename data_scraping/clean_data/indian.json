@@ -1,0 +1,56 @@
+[
+  {
+    "name": "The Banana Leaf Apolo",
+    "rating": 4.1,
+    "post_code": 449269,
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Mr and Mrs Mohgan's Super Crispy Roti Prata",
+    "rating": 4.3,
+    "post_code": 427551,
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Riverwalk Tandoor Restaurant",
+    "rating": 3.9,
+    "post_code": "058416",
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Chat Masala",
+    "rating": 4.1,
+    "post_code": 455254,
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Foodcoholic",
+    "rating": 4.4,
+    "post_code": "049422",
+    "cuisine": "Indian,Fusion"
+  },
+  {
+    "name": "Curry Nations",
+    "rating": 4.5,
+    "post_code": 138567,
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Salaam Bombay",
+    "rating": 4.5,
+    "post_code": 138522,
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Genius Central",
+    "rating": 4.3,
+    "post_code": "049949",
+    "cuisine": "Indian"
+  },
+  {
+    "name": "Noorvajagath 815 Indian Muslim Food",
+    "rating": 3,
+    "post_code": 640815,
+    "cuisine": "Indian"
+  }
+]

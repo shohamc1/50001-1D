@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="50dp"
-    android:paddingTop="50dp"
+    android:paddingTop="30dp"
     android:paddingBottom="0dp"
     android:background="@color/offWhite"
     >
@@ -13,14 +13,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corners"
         android:backgroundTint="@color/darkerOffWhite"
         android:id="@+id/search_layout">
 
-        <SearchView
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/search_bar"
+            android:hint="Search for dishes or cuisines"
         />
 
     </LinearLayout>
@@ -33,61 +33,65 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="@string/pop_lf"
-        android:textColor="@color/paletteBlue"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:paddingHorizontal="5dp"
-        android:textSize="18dp"/>
+        android:textStyle="bold"
+        android:textSize="25dp"/>
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/charaRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/pop_lf"
         android:layout_marginTop="10dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:paddingTop="0dp">
-            <include
-                android:layout_marginTop="10dp"
-                android:id="@+id/layout1"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/pop_lf"
-                android:gravity="center"
-                />
 
-            <include
-                android:id="@+id/layout2"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout1" />
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="vertical"-->
+        <!--            android:gravity="center"-->
+        <!--            android:paddingTop="0dp"-->
+        <!--            android:id="@+id/dishlist">-->
+        <!--            <include-->
+        <!--                android:layout_marginTop="10dp"-->
+        <!--                android:id="@+id/layout1"-->
+        <!--                layout="@layout/food_card"-->
+        <!--                android:layout_centerHorizontal="true"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_below="@+id/pop_lf"-->
+        <!--                android:gravity="center"-->
+        <!--                />-->
 
-            <include
-                android:id="@+id/layout3"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout2" />
+        <!--            <include-->
+        <!--                android:id="@+id/layout2"-->
+        <!--                layout="@layout/food_card"-->
+        <!--                android:layout_centerHorizontal="true"-->
+        <!--                android:layout_marginTop="15dp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_below="@+id/layout1" />-->
 
-            <include
-                android:id="@+id/layout4"
-                layout="@layout/food_card"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout3"
-                android:layout_marginBottom="50dp"/> <!-- last one special tag -->
-        </LinearLayout>
-    </ScrollView>
+        <!--            <include-->
+        <!--                android:id="@+id/layout3"-->
+        <!--                layout="@layout/food_card"-->
+        <!--                android:layout_centerHorizontal="true"-->
+        <!--                android:layout_marginTop="15dp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_below="@+id/layout2" />-->
+
+        <!--            <include-->
+        <!--                android:id="@+id/layout4"-->
+        <!--                layout="@layout/food_card"-->
+        <!--                android:layout_centerHorizontal="true"-->
+        <!--                android:layout_marginTop="15dp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_below="@+id/layout3"-->
+        <!--                android:layout_marginBottom="50dp"/>-->
+        <!--        </LinearLayout>-->
+    </androidx.recyclerview.widget.RecyclerView>
+
 
 </RelativeLayout>
