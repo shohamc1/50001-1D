@@ -105,7 +105,12 @@ public class FoodList extends MainActivity {
                                 imageName=transferString(imageName);
                                 resId = getResources().getIdentifier(imageName, "drawable", ctx.getPackageName());
                                 if (resId == 0) {
-                                    resId = R.drawable.default_food;
+                                    if (dishName.equals("Biryani (indian Variant) Or Nasi Briyani (malay Variant)")) {
+                                        resId = R.drawable.biryani;
+                                    }
+                                    else {
+                                        resId = R.drawable.default_food;
+                                    }
                                 }
                                 dishDatas.add(new FoodData(dishName, cuisine, description, resId, rating));
                                 //System.out.println(dishName);

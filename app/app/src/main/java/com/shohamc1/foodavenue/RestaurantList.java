@@ -116,12 +116,30 @@ public class RestaurantList extends AppCompatActivity {
 
                                     int resId;
                                     Context ctx = getBaseContext();
-                                    resId = getResources().getIdentifier(name, "drawable", ctx.getPackageName());
+                                    String restaurant_image_name = new String(name);
+                                    restaurant_image_name = transferString(restaurant_image_name);
+                                    resId = getResources().getIdentifier(restaurant_image_name, "drawable", ctx.getPackageName());
+
                                     if (resId == 0) {
-                                        resId = resId = R.drawable.default_food;
+
+                                        if (name.equals("100labs")) {
+                                            resId = R.drawable.labs;
+                                        }
+                                        else if (name.equals("363 Katong Laksa Holland Village Nasi Lemak")) {
+                                            resId = R.drawable.katonglaksa;
+                                        }
+                                        else if (name.equals("Pu3 Restaurant")) {
+                                            resId = R.drawable.pu3;
+                                        }
+                                        else {
+                                            resId = R.drawable.default_food;
+                                        }
                                     }
+
                                     restaurantDatas.add(new RestaurantData(cuisine, name, post_code, rating, resId));
                                     System.out.println(dishName);
+                                    System.out.println("Name of the restaurant is " + name);
+
                                 }
                             }
                         } else {
@@ -166,6 +184,13 @@ public class RestaurantList extends AppCompatActivity {
             map.put(i1.next(), i2.next());
         }
         return map;
+    }
+    public String transferString(String s) {
+
+        s = s.replaceAll("[^a-zA-Z]", "");
+        s=s.toLowerCase();
+
+        return s;
     }
 }
 
