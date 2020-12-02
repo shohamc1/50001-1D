@@ -22,14 +22,15 @@
         <activity android:label="Restaurants"
             android:name=".FoodList"
             />
-        <activity android:label="Landing"
-            android:name=".Landing"
-            />
+
         <activity android:label="Food_Details"
             android:name=".RestaurantList"
             />
         <activity android:label="Open_in_Map"
             android:name=".Restaurant"
+            />
+        <activity android:label="Open_in_Ma"
+            android:name=".AddRestaurant"
             />
     </application>
 
