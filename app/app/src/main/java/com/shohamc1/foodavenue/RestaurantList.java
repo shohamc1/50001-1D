@@ -62,7 +62,7 @@ public class RestaurantList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RestaurantList.this, AddRestaurant.class);
-
+                startActivity(intent);
             }
         });
         back = findViewById(R.id.food_back);
