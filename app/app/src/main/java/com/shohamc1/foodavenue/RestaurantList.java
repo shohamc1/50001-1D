@@ -39,6 +39,8 @@ public class RestaurantList extends AppCompatActivity {
     TextView dish_subtext;
     ImageView dish_photo;
     ImageView back;
+    ImageView plus;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -55,6 +57,14 @@ public class RestaurantList extends AppCompatActivity {
         setContentView(R.layout.restaurant_list);
         recyclerView = findViewById(R.id.restaurantRecyclerView);
         get_restaurant(description, dishName, cuisine, imageId);
+        plus = findViewById(R.id.plus);
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RestaurantList.this, AddRestaurant.class);
+
+            }
+        });
         back = findViewById(R.id.food_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +84,7 @@ public class RestaurantList extends AppCompatActivity {
         //CharaAdapter adapter = new CharaAdapter(dishDatas);
         //recyclerView.setLayoutManager( new LinearLayoutManager( this ));
         //recyclerView.setAdapter(adapter);
+
     }
 
 
