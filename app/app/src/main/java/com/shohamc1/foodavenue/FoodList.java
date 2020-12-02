@@ -48,9 +48,6 @@ public class FoodList extends MainActivity {
         recyclerView = findViewById(R.id.charaRecyclerView);
         get_dishes();
 
-        //CharaAdapter adapter = new CharaAdapter(dishDatas);
-        //recyclerView.setLayoutManager( new LinearLayoutManager( this ));
-        //recyclerView.setAdapter(adapter);
 
     }
 
@@ -79,9 +76,6 @@ public class FoodList extends MainActivity {
 
 
     public void get_dishes() {
-        //LinkedList<String> dishnames = new LinkedList<>();
-        //text.setText(food in database);
-        //image.setImage(image of food);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("dishes")
                 //.whereEqualTo("cuisine", "Desserts")
@@ -119,8 +113,6 @@ public class FoodList extends MainActivity {
                             Log.i("e", "Could not get Firebase data");
                         }
 
-                        //System.out.println("Dish names: ");
-                        //System.out.println(dishDatas.toString());
                         final CharaAdapter adapter = new CharaAdapter(dishDatas);
                         recyclerView.setLayoutManager(new LinearLayoutManager(FoodList.this));
                         adapter.setOnItemClickLitener(new CharaAdapter.OnItemClickLitener() {
@@ -156,19 +148,6 @@ public class FoodList extends MainActivity {
                         });
                     }
                 });
-    }
-
-    public HashMap<String, String> ListtoMap(List<String> keys, List<String> values) {
-        HashMap map = new HashMap() {
-        };
-        Iterator<String> i1 = keys.iterator();
-        Iterator<String> i2 = values.iterator();
-
-        while (i1.hasNext() && i2.hasNext()) {
-            map.put(i1.next(), i2.next());
-        }
-
-        return map;
     }
 
     public String transferString(String s) {
