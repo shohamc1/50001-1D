@@ -1,13 +1,19 @@
 package com.shohamc1.foodavenue;
 
+import android.app.Instrumentation;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class AddRestaurant extends AppCompatActivity {
+    ImageView back;
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
@@ -27,7 +33,22 @@ public class AddRestaurant extends AppCompatActivity {
 
         // Apply the adapter to the spinner
         staticSpinner.setAdapter(staticAdapter);
-
+        back = findViewById(R.id.food_back1);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Thread() {
+                    public void run() {
+                        try {
+                            Instrumentation inst = new Instrumentation();
+                            inst.sendKeyDownUpSync(KeyEvent.KEYCODE_BACK);
+                        } catch (Exception e) {
+                            Log.i("Error when Back", e.toString());
+                        }
+                    }
+                }.start();
+            }
+        });
 
     }
 
