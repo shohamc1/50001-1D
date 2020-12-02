@@ -7,8 +7,10 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,7 +51,12 @@ public class AddRestaurant extends AppCompatActivity {
                 }.start();
             }
         });
-
+        Button done = findViewById(R.id.button);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Sent for review!", Toast.LENGTH_LONG).show();
+            }
+        });
     }
-
 }
