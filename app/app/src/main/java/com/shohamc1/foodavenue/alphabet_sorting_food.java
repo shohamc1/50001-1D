@@ -6,14 +6,14 @@ public class alphabet_sorting_food {
 
 
     public void alphabet_sorting_food() {
-        String target = FoodData.dishName;
-
-        ArrayList<String> list = new ArrayList<String>();
-        for (String temp : target.split(" ")) {
-            list.add(temp);
-        }
-
-        Collections.sort(list);
+//        String target = FoodData.dishName;
+//
+//        ArrayList<String> list = new ArrayList<String>();
+//        for (String temp : target.split(" ")) {
+//            list.add(temp);
+//        }
+//
+//        Collections.sort(list);
 
 
     }
